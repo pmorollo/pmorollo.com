@@ -11,10 +11,98 @@
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Google Consent Mode v2 -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'functionality_storage': 'denied',
+            'personalization_storage': 'denied',
+            'security_storage': 'granted',
+            'wait_for_update': 500
+        });
+        gtag('set', 'ads_data_redaction', true);
+        gtag('set', 'url_passthrough', true);
+    </script>
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4222507666578900" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- Banner de Consentimento GDPR -->
+    <div class="consent-banner" id="consent-banner">
+        <div class="consent-content">
+            <div class="consent-text">
+                <h3>Respeitamos sua privacidade</h3>
+                <p>Utilizamos cookies e tecnologias semelhantes para melhorar sua experiência, personalizar conteúdo e anúncios, e analisar o tráfego do site. Você pode aceitar todos os cookies ou gerenciar suas preferências a qualquer momento.</p>
+            </div>
+            <div class="consent-actions">
+                <button class="consent-btn consent-btn-settings" onclick="openConsentSettings()">Gerenciar</button>
+                <button class="consent-btn consent-btn-reject" onclick="rejectConsent()">Rejeitar</button>
+                <button class="consent-btn consent-btn-accept" onclick="acceptConsent()">Aceitar Todos</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Configurações de Consentimento -->
+    <div class="consent-modal-overlay" id="consent-modal">
+        <div class="consent-modal">
+            <div class="consent-modal-header">
+                <h3>Preferências de Privacidade</h3>
+                <button class="consent-modal-close" onclick="closeConsentSettings()">&times;</button>
+            </div>
+            <div class="consent-modal-body">
+                <div class="consent-option">
+                    <div class="consent-option-info">
+                        <strong>Necessários</strong>
+                        <p>Essenciais para o funcionamento do site. Não podem ser desativados.</p>
+                    </div>
+                    <label class="consent-toggle">
+                        <input type="checkbox" checked disabled>
+                        <span class="consent-slider"></span>
+                    </label>
+                </div>
+                <div class="consent-option">
+                    <div class="consent-option-info">
+                        <strong>Publicidade</strong>
+                        <p>Usados para exibir anúncios relevantes. Coletam dados sobre sua navegação.</p>
+                    </div>
+                    <label class="consent-toggle">
+                        <input type="checkbox" id="consent-ads">
+                        <span class="consent-slider"></span>
+                    </label>
+                </div>
+                <div class="consent-option">
+                    <div class="consent-option-info">
+                        <strong>Personalização</strong>
+                        <p>Permitir que parceiros de anúncios criem perfis para exibir anúncios personalizados.</p>
+                    </div>
+                    <label class="consent-toggle">
+                        <input type="checkbox" id="consent-personalization">
+                        <span class="consent-slider"></span>
+                    </label>
+                </div>
+                <div class="consent-option">
+                    <div class="consent-option-info">
+                        <strong>Análise</strong>
+                        <p>Nos ajudam a entender como você usa o site para melhorar sua experiência.</p>
+                    </div>
+                    <label class="consent-toggle">
+                        <input type="checkbox" id="consent-analytics">
+                        <span class="consent-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="consent-modal-footer">
+                <button class="consent-btn consent-btn-reject" onclick="rejectConsent()">Rejeitar Todos</button>
+                <button class="consent-btn consent-btn-accept" onclick="savePreferences()">Salvar Preferências</button>
+            </div>
+        </div>
+    </div>
 
     <header class="site-header">
         <div class="container">
@@ -287,5 +375,73 @@
     <div id="toast" class="toast hidden"></div>
 
     <script src="app.js"></script>
+    <script>
+        function getStoredConsent() {
+            try { return JSON.parse(localStorage.getItem('consent_choices')); } catch(e) { return null; }
+        }
+
+        function showConsentBanner() {
+            if (!getStoredConsent()) {
+                document.getElementById('consent-banner').classList.add('show');
+            }
+        }
+
+        function updateConsentMode(ads, personalization, analytics) {
+            gtag('consent', 'update', {
+                'ad_storage': ads ? 'granted' : 'denied',
+                'ad_user_data': ads ? 'granted' : 'denied',
+                'ad_personalization': personalization ? 'granted' : 'denied',
+                'analytics_storage': analytics ? 'granted' : 'denied'
+            });
+            gtag('set', 'ads_data_redaction', !ads);
+            gtag('set', 'url_passthrough', !(ads || analytics));
+        }
+
+        function acceptConsent() {
+            var c = { ads: true, personalization: true, analytics: true, date: new Date().toISOString() };
+            localStorage.setItem('consent_choices', JSON.stringify(c));
+            updateConsentMode(true, true, true);
+            document.getElementById('consent-banner').classList.remove('show');
+        }
+
+        function rejectConsent() {
+            var c = { ads: false, personalization: false, analytics: false, date: new Date().toISOString() };
+            localStorage.setItem('consent_choices', JSON.stringify(c));
+            updateConsentMode(false, false, false);
+            document.getElementById('consent-banner').classList.remove('show');
+        }
+
+        function savePreferences() {
+            var ads = document.getElementById('consent-ads').checked;
+            var personalization = document.getElementById('consent-personalization').checked;
+            var analytics = document.getElementById('consent-analytics').checked;
+            var c = { ads: ads, personalization: personalization, analytics: analytics, date: new Date().toISOString() };
+            localStorage.setItem('consent_choices', JSON.stringify(c));
+            updateConsentMode(ads, personalization, analytics);
+            document.getElementById('consent-banner').classList.remove('show');
+            document.getElementById('consent-modal').classList.remove('show');
+        }
+
+        function openConsentSettings() {
+            var c = getStoredConsent() || { ads: false, personalization: false, analytics: false };
+            document.getElementById('consent-ads').checked = c.ads;
+            document.getElementById('consent-personalization').checked = c.personalization;
+            document.getElementById('consent-analytics').checked = c.analytics;
+            document.getElementById('consent-modal').classList.add('show');
+        }
+
+        function closeConsentSettings() {
+            document.getElementById('consent-modal').classList.remove('show');
+        }
+
+        (function() {
+            var stored = getStoredConsent();
+            if (stored) {
+                updateConsentMode(stored.ads, stored.personalization, stored.analytics);
+            } else {
+                showConsentBanner();
+            }
+        })();
+    </script>
 </body>
 </html>
