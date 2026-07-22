@@ -113,6 +113,24 @@ body {
     width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
 }
 
+/* ===== LEGAL PAGES ===== */
+.legal-page { padding: 60px 0 80px; }
+.legal-page h1 { font-family: var(--font-heading); font-size: 36px; margin-bottom: 8px; }
+.legal-updated { font-size: 13px; color: var(--text-muted); margin-bottom: 40px; }
+.legal-content { max-width: 760px; }
+.legal-content h2 { font-family: var(--font-heading); font-size: 20px; margin-top: 32px; margin-bottom: 12px; color: var(--text-primary); }
+.legal-content p { font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 12px; }
+.legal-content ul { margin: 12px 0; padding-left: 24px; }
+.legal-content li { font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 6px; }
+.legal-content a { color: var(--accent); text-decoration: none; }
+.legal-content a:hover { text-decoration: underline; }
+.back-link {
+    font-size: 13px; color: var(--text-muted); text-decoration: none; font-weight: 500;
+    padding: 6px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+    transition: all 0.2s;
+}
+.back-link:hover { border-color: var(--accent); color: var(--accent); }
+
 /* ===== AD CONTAINERS ===== */
 .ad-container { padding: 16px 0; text-align: center; }
 .ad-slot { margin: 0 auto; max-width: 728px; }
