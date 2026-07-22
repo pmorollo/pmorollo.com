@@ -113,6 +113,25 @@ body {
     width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
 }
 
+/* ===== MEDIA MENTIONS ===== */
+.media-mentions {
+    background: var(--bg-secondary); border-left: 4px solid var(--accent);
+    border-radius: var(--radius-sm); padding: 24px 28px; margin: 32px 0;
+}
+.media-mentions h4 {
+    font-family: var(--font-heading); font-size: 14px; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--accent); margin-bottom: 16px;
+}
+.media-mentions blockquote {
+    border: none; margin: 0 0 16px; padding: 0; font-style: italic;
+    font-size: 15px; line-height: 1.7; color: var(--text-secondary);
+}
+.media-mentions blockquote:last-child { margin-bottom: 0; }
+.media-mentions cite {
+    display: block; font-style: normal; font-size: 13px;
+    color: var(--text-muted); margin-top: 8px; font-weight: 500;
+}
+
 /* ===== LEGAL PAGES ===== */
 .legal-page { padding: 60px 0 80px; }
 .legal-page h1 { font-family: var(--font-heading); font-size: 36px; margin-bottom: 8px; }

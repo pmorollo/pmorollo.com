@@ -30,6 +30,19 @@ const articles = [
             <h2>A Relevância Contemporânea</h2>
             <p>Em tempos de redes sociais e performance de identidade, a obra de Machado nunca esteve tão atual. Brás Cubas, com sua necessidade de ser lembrado, não seria diferente de qualquer influenciador digital. Bentinho, com seus ciúmes infundados, espelha as inseguranças modernas.</p>
 
+            <div class="media-mentions">
+                <h4>O que dizem por aí</h4>
+                <blockquote>"Dom Casmurro nos ensina a ler — e reler — com detalhes precisos e uma obstrução magistral."
+                    <cite>— The New York Times, 2023</cite>
+                </blockquote>
+                <blockquote>"A obra tardia de Machado, com sua experimentação e crescente interesse na complexidade narrativa, prefigura muitas das preocupações das vanguardas do século XX."
+                    <cite>— The Guardian, 2012</cite>
+                </blockquote>
+                <blockquote>"Memórias Póstumas de Brás Cubas é uma obra-prima lúdica que expandiu as possibilidades do romance."
+                    <cite>— The New York Times, 2020</cite>
+                </blockquote>
+            </div>
+
             <p>Ler Machado é entender que a natureza humana não muda — apenas mudam os cenários em que se representa. É por isso que sua obra é eterna.</p>
         `
     },
