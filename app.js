@@ -452,8 +452,46 @@ function handleSearch(query) {
 
 function handleSubscribe(e) {
     e.preventDefault();
-    e.target.querySelector('input').value = '';
-    showToast('Inscricao realizada com sucesso!');
+    const input = e.target.querySelector('input');
+    const email = input.value.trim();
+    if (!email || !email.includes('@')) {
+        showToast('Por favor, insira um email válido.');
+        return;
+    }
+    const subscribers = JSON.parse(localStorage.getItem('newsletter_subscribers') || '[]');
+    if (subscribers.find(s => s.email === email)) {
+        showToast('Este email já está inscrito!');
+        input.value = '';
+        return;
+    }
+    subscribers.push({ email: email, date: new Date().toISOString() });
+    localStorage.setItem('newsletter_subscribers', JSON.stringify(subscribers));
+    input.value = '';
+    showToast('Inscrição realizada com sucesso! Bem-vindo(a) ao Clube da Leitura.');
+}
+
+function getSubscribers() {
+    return JSON.parse(localStorage.getItem('newsletter_subscribers') || '[]');
+}
+
+function exportSubscribers() {
+    const subs = getSubscribers();
+    if (subs.length === 0) {
+        showToast('Nenhum inscrito encontrado.');
+        return;
+    }
+    let csv = 'Email,Data de Inscrição\n';
+    subs.forEach(s => {
+        csv += s.email + ',' + new Date(s.date).toLocaleDateString('pt-BR') + '\n';
+    });
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'inscricoes_pagina_virada.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+    showToast(subs.length + ' inscrito(s) exportado(s)!');
 }
 
 function updateShareLinks(article) {
