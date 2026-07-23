@@ -27,64 +27,178 @@
         .admin-actions { display: flex; gap: 12px; margin-bottom: 24px; }
         .btn-secondary { background: var(--bg-tertiary); color: var(--text-secondary); border: 1px solid var(--border); padding: 10px 20px; border-radius: var(--radius-sm); cursor: pointer; font-weight: 600; font-size: 13px; transition: all 0.2s; text-decoration: none; display: inline-block; }
         .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+        .btn-logout { background: transparent; color: var(--text-muted); border: 1px solid var(--border); padding: 10px 20px; border-radius: var(--radius-sm); cursor: pointer; font-weight: 600; font-size: 13px; transition: all 0.2s; }
+        .btn-logout:hover { border-color: #e74c3c; color: #e74c3c; }
+
+        /* Login */
+        .login-overlay {
+            position: fixed; inset: 0; background: var(--bg-primary);
+            display: flex; align-items: center; justify-content: center; z-index: 9999;
+        }
+        .login-overlay.hidden { display: none; }
+        .login-box {
+            background: var(--bg-secondary); border: 1px solid var(--border);
+            border-radius: var(--radius-md); padding: 40px; width: 100%; max-width: 380px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        .login-box h2 { font-family: var(--font-heading); text-align: center; margin-bottom: 8px; }
+        .login-box p { text-align: center; color: var(--text-muted); font-size: 13px; margin-bottom: 24px; }
+        .login-box .logo { display: flex; justify-content: center; margin-bottom: 24px; }
+        .login-input {
+            width: 100%; padding: 12px 16px; border: 1px solid var(--border);
+            border-radius: var(--radius-sm); background: var(--bg-primary);
+            color: var(--text-primary); font-size: 14px; font-family: var(--font-body);
+            outline: none; transition: border-color 0.2s; text-align: center;
+            letter-spacing: 4px; font-size: 18px;
+        }
+        .login-input:focus { border-color: var(--accent); }
+        .login-input::placeholder { letter-spacing: normal; font-size: 14px; }
+        .login-btn {
+            width: 100%; padding: 12px; background: var(--accent); color: white;
+            border: none; border-radius: var(--radius-sm); cursor: pointer;
+            font-weight: 600; font-size: 14px; margin-top: 16px; transition: background 0.2s;
+        }
+        .login-btn:hover { background: var(--accent-hover); }
+        .login-error { color: #e74c3c; font-size: 13px; text-align: center; margin-top: 12px; display: none; }
+
+        .admin-content.hidden { display: none; }
     </style>
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <span class="logo-icon">
-                    <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                        <path d="M4 6C4 4.89543 4.89543 4 6 4H14C15.1046 4 16 4.89543 16 6V26C16 27.1046 15.1046 28 14 28H6C4.89543 28 4 27.1046 4 26V6Z" fill="currentColor" opacity="0.2"/>
-                        <path d="M18 6C18 4.89543 18.8954 4 20 4H26C27.1046 4 28 4.89543 28 6V26C28 27.1046 27.1046 28 26 28H20C18.8954 28 18 27.1046 18 26V6Z" fill="currentColor" opacity="0.35"/>
-                        <path d="M6 5C6 4.44772 6.44772 4 7 4H13C13.5523 4 14 4.44772 14 5V25C14 25.5523 13.5523 26 13 26H7C6.44772 26 6 25.5523 6 25V5Z" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M20 5C20 4.44772 20.4477 4 21 4H25C25.5523 4 26 4.44772 26 5V25C26 25.5523 25.5523 26 25 26H21C20.4477 26 20 25.5523 20 25V5Z" stroke="currentColor" stroke-width="1.5"/>
-                    </svg>
-                </span>
-                <span class="logo-text">Página Virada</span>
-            </a>
-            <a href="index.html" class="back-link">Voltar ao Blog</a>
+    <!-- Tela de Login -->
+    <div class="login-overlay" id="login-overlay">
+        <div class="login-box">
+            <div class="logo">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <path d="M4 6C4 4.89543 4.89543 4 6 4H14C15.1046 4 16 4.89543 16 6V26C16 27.1046 15.1046 28 14 28H6C4.89543 28 4 27.1046 4 26V6Z" fill="currentColor" opacity="0.2"/>
+                            <path d="M18 6C18 4.89543 18.8954 4 20 4H26C27.1046 4 28 4.89543 28 6V26C28 27.1046 27.1046 28 26 28H20C18.8954 28 18 27.1046 18 26V6Z" fill="currentColor" opacity="0.35"/>
+                            <path d="M6 5C6 4.44772 6.44772 4 7 4H13C13.5523 4 14 4.44772 14 5V25C14 25.5523 13.5523 26 13 26H7C6.44772 26 6 25.5523 6 25V5Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M20 5C20 4.44772 20.4477 4 21 4H25C25.5523 4 26 4.44772 26 5V25C26 25.5523 25.5523 26 25 26H21C20.4477 26 20 25.5523 20 25V5Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </span>
+                    <span class="logo-text">Página Virada</span>
+                </a>
+            </div>
+            <h2>Acesso Restrito</h2>
+            <p>Painel Administrativo</p>
+            <input type="password" class="login-input" id="login-password" placeholder="Digite a senha" maxlength="20">
+            <button class="login-btn" onclick="attemptLogin()">Entrar</button>
+            <div class="login-error" id="login-error">Senha incorreta. Tente novamente.</div>
         </div>
-    </header>
+    </div>
 
-    <main>
-        <section class="admin-page">
+    <!-- Conteúdo Admin (escondido até login) -->
+    <div class="admin-content hidden" id="admin-content">
+        <header class="site-header">
             <div class="container">
-                <h1>Painel Administrativo</h1>
-                <p class="admin-subtitle">Gerencie as inscrições da newsletter do Página Virada</p>
-
-                <div class="admin-stats">
-                    <div class="stat-box">
-                        <div class="stat-number" id="total-subs">0</div>
-                        <div class="stat-label">Inscritos Total</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-number" id="today-subs">0</div>
-                        <div class="stat-label">Inscritos Hoje</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-number" id="week-subs">0</div>
-                        <div class="stat-label">Esta Semana</div>
-                    </div>
-                </div>
-
-                <div class="admin-actions">
-                    <button class="btn-export" onclick="exportCSV()">Exportar CSV</button>
-                    <a href="index.html" class="btn-secondary">Ver Blog</a>
-                </div>
-
-                <div class="admin-card">
-                    <h2>Lista de Inscritos</h2>
-                    <ul class="subscriber-list" id="subscriber-list"></ul>
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <path d="M4 6C4 4.89543 4.89543 4 6 4H14C15.1046 4 16 4.89543 16 6V26C16 27.1046 15.1046 28 14 28H6C4.89543 28 4 27.1046 4 26V6Z" fill="currentColor" opacity="0.2"/>
+                            <path d="M18 6C18 4.89543 18.8954 4 20 4H26C27.1046 4 28 4.89543 28 6V26C28 27.1046 27.1046 28 26 28H20C18.8954 28 18 27.1046 18 26V6Z" fill="currentColor" opacity="0.35"/>
+                            <path d="M6 5C6 4.44772 6.44772 4 7 4H13C13.5523 4 14 4.44772 14 5V25C14 25.5523 13.5523 26 13 26H7C6.44772 26 6 25.5523 6 25V5Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M20 5C20 4.44772 20.4477 4 21 4H25C25.5523 4 26 4.44772 26 5V25C26 25.5523 25.5523 26 25 26H21C20.4477 26 20 25.5523 20 25V5Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </span>
+                    <span class="logo-text">Página Virada</span>
+                </a>
+                <div style="display:flex;gap:12px;align-items:center;">
+                    <a href="index.html" class="back-link">Ver Blog</a>
+                    <button class="btn-logout" onclick="logout()">Sair</button>
                 </div>
             </div>
-        </section>
-    </main>
+        </header>
+
+        <main>
+            <section class="admin-page">
+                <div class="container">
+                    <h1>Painel Administrativo</h1>
+                    <p class="admin-subtitle">Gerencie as inscrições da newsletter do Página Virada</p>
+
+                    <div class="admin-stats">
+                        <div class="stat-box">
+                            <div class="stat-number" id="total-subs">0</div>
+                            <div class="stat-label">Inscritos Total</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number" id="today-subs">0</div>
+                            <div class="stat-label">Inscritos Hoje</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number" id="week-subs">0</div>
+                            <div class="stat-label">Esta Semana</div>
+                        </div>
+                    </div>
+
+                    <div class="admin-actions">
+                        <button class="btn-export" onclick="exportCSV()">Exportar CSV</button>
+                    </div>
+
+                    <div class="admin-card">
+                        <h2>Lista de Inscritos</h2>
+                        <ul class="subscriber-list" id="subscriber-list"></ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 
     <div id="toast" class="toast hidden"></div>
 
     <script>
+        const ADMIN_HASH = 'bcb15f821479b4d5772bd0ca866c00ad5f926e3580720659cc80d39c9d09802a';
+
+        async function sha256(message) {
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        async function attemptLogin() {
+            const input = document.getElementById('login-password');
+            const error = document.getElementById('login-error');
+            const password = input.value;
+
+            if (!password) {
+                error.style.display = 'block';
+                return;
+            }
+
+            const hash = await sha256(password);
+
+            if (hash === ADMIN_HASH) {
+                sessionStorage.setItem('admin_auth', 'true');
+                document.getElementById('login-overlay').classList.add('hidden');
+                document.getElementById('admin-content').classList.remove('hidden');
+                renderSubscribers();
+            } else {
+                error.style.display = 'block';
+                input.value = '';
+                input.focus();
+            }
+        }
+
+        function logout() {
+            sessionStorage.removeItem('admin_auth');
+            location.reload();
+        }
+
+        function checkAuth() {
+            if (sessionStorage.getItem('admin_auth') === 'true') {
+                document.getElementById('login-overlay').classList.add('hidden');
+                document.getElementById('admin-content').classList.remove('hidden');
+                renderSubscribers();
+            }
+        }
+
+        document.getElementById('login-password').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') attemptLogin();
+        });
+
         function getSubscribers() {
             return JSON.parse(localStorage.getItem('newsletter_subscribers') || '[]');
         }
@@ -106,7 +220,7 @@
                 return;
             }
 
-            list.innerHTML = subs.reverse().map(s => `
+            list.innerHTML = subs.slice().reverse().map(s => `
                 <li class="subscriber-item">
                     <span class="subscriber-email">${s.email}</span>
                     <span class="subscriber-date">${new Date(s.date).toLocaleDateString('pt-BR')} às ${new Date(s.date).toLocaleTimeString('pt-BR', {hour: '2-digit', minute:'2-digit'})}</span>
@@ -140,7 +254,7 @@
             setTimeout(() => t.classList.add('hidden'), 3000);
         }
 
-        renderSubscribers();
+        checkAuth();
     </script>
 
 </body>
