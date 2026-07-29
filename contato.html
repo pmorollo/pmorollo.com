@@ -125,7 +125,7 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2026 Página Virada. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Página Virada. Todos os direitos reservados. <a href="politica-privacidade.html">Política de Privacidade</a> | <a href="termos-de-uso.html">Termos de Uso</a></p>
             </div>
         </div>
     </footer>
@@ -136,6 +136,7 @@
             const form = document.getElementById('contact-form');
             const success = document.getElementById('form-success');
             const data = new FormData(form);
+            data.set('_subject', 'Contato - Página Virada: ' + (data.get('subject') || ''));
             const messages = JSON.parse(localStorage.getItem('contact_messages') || '[]');
             messages.push({
                 name: data.get('name'),
@@ -145,6 +146,13 @@
                 date: new Date().toISOString()
             });
             localStorage.setItem('contact_messages', JSON.stringify(messages));
+            fetch('https://formspree.io/f/meeydgna', {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).catch(function(error) {
+                console.log('Erro ao enviar contato:', error);
+            });
             form.style.display = 'none';
             success.classList.add('show');
         }
