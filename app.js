@@ -466,6 +466,19 @@ function handleSubscribe(e) {
     }
     subscribers.push({ email: email, date: new Date().toISOString() });
     localStorage.setItem('newsletter_subscribers', JSON.stringify(subscribers));
+
+    const formData = new FormData();
+    formData.append('email', email);
+    formData.append('_subject', 'Nova inscrição na Newsletter Página Virada');
+
+    fetch('https://formspree.io/f/meeydgna', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    }).catch(function(error) {
+        console.log('Erro ao enviar para Formspree:', error);
+    });
+
     input.value = '';
     showToast('Inscrição realizada com sucesso! Bem-vindo(a) ao Clube da Leitura.');
 }
