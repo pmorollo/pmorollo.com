@@ -8,6 +8,7 @@
     --accent: #8b2500;
     --accent-light: #b85c3a;
     --accent-bg: #fdf2ee;
+    --accent-hover: #b85c3a;
     --border: #e8e4df;
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
     --shadow: 0 4px 20px rgba(0,0,0,0.06);
@@ -17,6 +18,8 @@
     --radius-lg: 20px;
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --sidebar-width: 320px;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', -apple-system, system-ui, sans-serif;
 }
 
 [data-theme="dark"] {
