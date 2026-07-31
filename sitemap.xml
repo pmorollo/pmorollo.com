@@ -43,21 +43,12 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- Artigos Individuais -->
-  <url><loc>https://pmorollo.com/artigos/o-poder-transformador-da-leitura.html</loc><lastmod>2026-07-29</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/arquetipos-de-jung-na-literatura.html</loc><lastmod>2026-07-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/machado-de-assis-e-a-paranoia.html</loc><lastmod>2026-07-27</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/a-jornada-do-heroi-no-cinema.html</loc><lastmod>2026-07-26</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/a-leitura-profunda-como-antidoto.html</loc><lastmod>2026-07-25</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/clarice-lispector-e-a-epifania.html</loc><lastmod>2026-07-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/distopias-literarias-orwell-huxley.html</loc><lastmod>2026-07-23</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/arquetipo-da-sombra-nas-redes-sociais.html</loc><lastmod>2026-07-22</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/kafka-e-a-alienacao-do-homem-moderno.html</loc><lastmod>2026-07-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/dostoievski-e-a-psicologia-da-culpa.html</loc><lastmod>2026-07-20</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/funcao-simbolica-da-literatura-e-empatia.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/de-homero-a-christopher-nolan-mitos.html</loc><lastmod>2026-07-18</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/guimaraes-rosa-e-o-sertao-da-mente.html</loc><lastmod>2026-07-17</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/a-literatura-e-o-inconsciente-coletivo.html</loc><lastmod>2026-07-16</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/o-mito-da-caverna-de-platao-na-era-digital.html</loc><lastmod>2026-07-15</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pmorollo.com/artigos/viver-varias-vidas-em-uma.html</loc><lastmod>2026-07-14</lastmod><priority>0.8</priority></url>
+  <!-- Artigos Originais -->
+  <url><loc>https://pmorollo.com/artigos/machado-de-assis.html</loc><lastmod>2026-07-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pmorollo.com/artigos/10-livros-essenciais.html</loc><lastmod>2026-07-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pmorollo.com/artigos/clarice-lispector.html</loc><lastmod>2026-07-10</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pmorollo.com/artigos/a-arte-de-ler.html</loc><lastmod>2026-07-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pmorollo.com/artigos/itamar-vieira-junior.html</loc><lastmod>2026-07-05</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pmorollo.com/artigos/garcia-marquez.html</loc><lastmod>2026-07-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pmorollo.com/artigos/guimaraes-rosa.html</loc><lastmod>2026-07-01</lastmod><priority>0.8</priority></url>
 </urlset>
