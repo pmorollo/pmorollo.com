@@ -3,7 +3,8 @@ const articles = [
         id: 0,
         slug: "o-poder-transformador-da-leitura",
         url: "artigos/o-poder-transformador-da-leitura.html",
-        title: "O Poder Transformador da Leitura: Como os Livros Moldam a Percepção e a Psique Humana",
+        shortTitle: "O Poder da Leitura",
+        subtitle: "Como a grande literatura molda a percepção e a psique humana",
         excerpt: "Uma análise profunda de como a leitura transformadora atua no desenvolvimento pessoal, na expansão da consciência e nos arquétipos universais.",
         category: "comportamento",
         categoryName: "Comportamento e Cultura",
@@ -19,7 +20,8 @@ const articles = [
         id: 1,
         slug: "arquetipos-de-jung-na-literatura",
         url: "artigos/arquetipos-de-jung-na-literatura.html",
-        title: "Arquétipos de Jung na Literatura: Das Sombras de Dostoiévski ao Herói de Cervantes",
+        shortTitle: "Arquétipos",
+        subtitle: "Das sombras de Dostoiévski ao herói de Cervantes na literatura",
         excerpt: "Como a psicologia analítica nos ajuda a compreender a presença dos símbolos primordiais e a psique humana nas grandes narrativas.",
         category: "analise",
         categoryName: "Análise Literária",
@@ -35,7 +37,8 @@ const articles = [
         id: 2,
         slug: "machado-de-assis-e-a-paranoia",
         url: "artigos/machado-de-assis-e-a-paranoia.html",
-        title: "Machado de Assis e a Anatomia da Paranoia: O Inconsciente Coletivo em Dom Casmurro",
+        shortTitle: "Dom Casmurro",
+        subtitle: "Machado de Assis e a anatomia da paranoia e do inconsciente coletivo",
         excerpt: "Uma análise psicanalítica da narratividade não-confiável e do ciúme arquetípico na literatura brasileira.",
         category: "analise",
         categoryName: "Análise Literária",
@@ -51,7 +54,8 @@ const articles = [
         id: 3,
         slug: "a-jornada-do-heroi-no-cinema",
         url: "artigos/a-jornada-do-heroi-no-cinema.html",
-        title: "A Jornada do Herói no Cinema Moderno: Como as Narrativas Ancestrais se Repetem na Pop Culture",
+        shortTitle: "A Jornada do Herói",
+        subtitle: "Como as narrativas ancestrais se repetem no cinema contemporâneo",
         excerpt: "De Joseph Campbell a Christopher Nolan e Star Wars: a estrutura dos mitos clássicos na tela do cinema contemporâneo.",
         category: "fatos",
         categoryName: "Fatos Atuais",
@@ -67,7 +71,8 @@ const articles = [
         id: 4,
         slug: "a-leitura-profunda-como-antidoto",
         url: "artigos/a-leitura-profunda-como-antidoto.html",
-        title: "A Leitura Profunda como Antídoto à Fragmentação da Atenção Contemporânea",
+        shortTitle: "Leitura Profunda",
+        subtitle: "O antídoto à fragmentação da atenção na era digital",
         excerpt: "Como o foco contínuo e a imersão nos livros clássicos curam o cérebro hiperestimulado pela tecnologia.",
         category: "comportamento",
         categoryName: "Comportamento e Cultura",
@@ -82,7 +87,8 @@ const articles = [
         id: 5,
         slug: "clarice-lispector-e-a-epifania",
         url: "artigos/clarice-lispector-e-a-epifania.html",
-        title: "Clarice Lispector e o Abrir dos Olhos: A Epifania como Expansão da Consciência",
+        shortTitle: "Clarice Lispector",
+        subtitle: "A epifania como expansão da consciência no cotidiano",
         excerpt: "A prosa existencial de Clarice e a capacidade de revelar o mistério do ser através do cotidiano.",
         category: "analise",
         categoryName: "Análise Literária",
@@ -97,7 +103,8 @@ const articles = [
         id: 6,
         slug: "distopias-literarias-orwell-huxley",
         url: "artigos/distopias-literarias-orwell-huxley.html",
-        title: "Distopias Literárias e a Realidade Atual: Orwell e Huxley Decifrando o Século XXI",
+        shortTitle: "Distopias",
+        subtitle: "Orwell e Huxley decifrando a realidade do século XXI",
         excerpt: "Entre a vigilância (1984) e a anestesia (Admirável Mundo Novo): o espelho da sociedade digital.",
         category: "fatos",
         categoryName: "Fatos Atuais",
@@ -112,7 +119,8 @@ const articles = [
         id: 7,
         slug: "arquetipo-da-sombra-nas-redes-sociais",
         url: "artigos/arquetipo-da-sombra-nas-redes-sociais.html",
-        title: "O Arquétipo da Sombra na Comunicação e nas Redes Sociais",
+        shortTitle: "A Sombra",
+        subtitle: "O arquétipo junguiano na comunicação e nas redes sociais",
         excerpt: "Como a projeção inconsciente da Sombra junguiana explica o cancelamento e a polarização digital.",
         category: "comportamento",
         categoryName: "Comportamento e Cultura",
@@ -127,7 +135,8 @@ const articles = [
         id: 8,
         slug: "kafka-e-a-alienacao-do-homem-moderno",
         url: "artigos/kafka-e-a-alienacao-do-homem-moderno.html",
-        title: "Franz Kafka e a Burocracia da Alma: A Alienação do Homem Moderno",
+        shortTitle: "Franz Kafka",
+        subtitle: "A burocracia da alma e a alienação do homem moderno",
         excerpt: "Como a obra de Kafka antecipou o sentimento de desumanização no ambiente corporativo contemporâneo.",
         category: "analise",
         categoryName: "Análise Literária",
@@ -142,7 +151,8 @@ const articles = [
         id: 9,
         slug: "dostoievski-e-a-psicologia-da-culpa",
         url: "artigos/dostoievski-e-a-psicologia-da-culpa.html",
-        title: "Dostoiévski e a Psicologia da Culpa e Redenção",
+        shortTitle: "Dostoiévski",
+        subtitle: "A psicologia da culpa, dor e redenção nos grandes romances russos",
         excerpt: "Análise profunda das dinâmicas morais em Crime e Castigo e Os Irmãos Karamázov.",
         category: "analise",
         categoryName: "Análise Literária",
@@ -157,7 +167,8 @@ const articles = [
         id: 10,
         slug: "funcao-simbolica-da-literatura-e-empatia",
         url: "artigos/funcao-simbolica-da-literatura-e-empatia.html",
-        title: "A Função Simbólica da Literatura no Desenvolvimento da Empatia",
+        shortTitle: "A Empatia",
+        subtitle: "A função simbólica da ficção no desenvolvimento da inteligência emocional",
         excerpt: "Como a vivência da perspectiva alheia através dos livros expande nossa inteligência emocional.",
         category: "comportamento",
         categoryName: "Comportamento e Cultura",
@@ -172,7 +183,8 @@ const articles = [
         id: 11,
         slug: "de-homero-a-christopher-nolan-mitos",
         url: "artigos/de-homero-a-christopher-nolan-mitos.html",
-        title: "De Homero a Christopher Nolan: A Permanência dos Mitos na Narrativa Audiovisual",
+        shortTitle: "Os Mitos",
+        subtitle: "De Homero a Christopher Nolan na narrativa audiovisual",
         excerpt: "O tempo, o sacrifício e os mitos gregos reimaginados no cinema de grande porte.",
         category: "fatos",
         categoryName: "Fatos Atuais",
@@ -187,7 +199,8 @@ const articles = [
         id: 12,
         slug: "guimaraes-rosa-e-o-sertao-da-mente",
         url: "artigos/guimaraes-rosa-e-o-sertao-da-mente.html",
-        title: "Guimarães Rosa e o Sertão da Mente: Onde o Regional se Torna Universal",
+        shortTitle: "Guimarães Rosa",
+        subtitle: "O sertão da mente e a travessia espiritual em Grande Sertão: Veredas",
         excerpt: "A busca metafísica de Riobaldo e as batalhas espirituais na grande obra brasileira.",
         category: "analise",
         categoryName: "Análise Literária",
@@ -202,7 +215,8 @@ const articles = [
         id: 13,
         slug: "a-literatura-e-o-inconsciente-coletivo",
         url: "artigos/a-literatura-e-o-inconsciente-coletivo.html",
-        title: "A Literatura e o Inconsciente Coletivo: Como os Grandes Livros Capturam a Sua Época",
+        shortTitle: "Inconsciente Coletivo",
+        subtitle: "Como os grandes livros capturam as angústias de sua época",
         excerpt: "O escritor como sismógrafo das angústias e sonhos subterrâneos da civilização.",
         category: "analise",
         categoryName: "Análise Literária",
@@ -217,7 +231,8 @@ const articles = [
         id: 14,
         slug: "o-mito-da-caverna-de-platao-na-era-digital",
         url: "artigos/o-mito-da-caverna-de-platao-na-era-digital.html",
-        title: "O Mito da Caverna de Platão na Era Digital: Ilusão e Percepção",
+        shortTitle: "Mito da Caverna",
+        subtitle: "Platão, algoritmos e as ilusões da era digital",
         excerpt: "Algoritmos, feeds e sombras digitais: a profecia de Platão sobre a ilusão contemporânea.",
         category: "fatos",
         categoryName: "Fatos Atuais",
@@ -232,7 +247,8 @@ const articles = [
         id: 15,
         slug: "viver-varias-vidas-em-uma",
         url: "artigos/viver-varias-vidas-em-uma.html",
-        title: "Viver Várias Vidas em Uma: A Leitura como Experiência de Transformação Pessoal",
+        shortTitle: "Várias Vidas",
+        subtitle: "A leitura como experiência autêntica de transformação pessoal",
         excerpt: "Por que ler livros densos é a maneira mais autêntica de multiplicar a sabedoria de uma vida.",
         category: "comportamento",
         categoryName: "Comportamento e Cultura",
@@ -263,7 +279,10 @@ function renderHero() {
     const heroArticle = articles[0];
     const heroTag = document.querySelector('.hero-tag');
     if (heroTag) heroTag.textContent = heroArticle.categoryName;
-    document.getElementById('hero-title').textContent = heroArticle.title;
+    document.getElementById('hero-title').innerHTML = `
+        <span style="font-family: 'Playfair Display', serif; font-size: 42px; display: block; margin-bottom: 8px;">${heroArticle.shortTitle}</span>
+        <span style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); display: block; line-height: 1.4;">${heroArticle.subtitle}</span>
+    `;
     document.getElementById('hero-excerpt').textContent = heroArticle.excerpt;
     document.getElementById('hero-author').textContent = heroArticle.author;
     document.getElementById('hero-date').textContent = heroArticle.date;
@@ -291,7 +310,8 @@ function renderArticles() {
     if (currentSearch) {
         const query = currentSearch.toLowerCase();
         filtered = filtered.filter(a => 
-            a.title.toLowerCase().includes(query) || 
+            a.shortTitle.toLowerCase().includes(query) ||
+            a.subtitle.toLowerCase().includes(query) ||
             a.excerpt.toLowerCase().includes(query)
         );
     }
@@ -302,20 +322,22 @@ function renderArticles() {
     }
 
     grid.innerHTML = filtered.map(a => `
-        <article class="article-card">
-            <a href="${a.url}" class="card-image-link">
-                <div class="card-image" style="background-image: url('${a.thumb}')"></div>
+        <article class="article-card" onclick="window.location.href='${a.url}'">
+            <a href="${a.url}" class="card-image-link" onclick="event.stopPropagation()">
+                <div class="card-image article-card-image" style="background-image: url('${a.thumb}')">
+                    <span class="article-card-category">${a.categoryName}</span>
+                </div>
             </a>
-            <div class="card-content">
-                <span class="card-category">${a.categoryName}</span>
-                <h3 class="card-title">
-                    <a href="${a.url}">${a.title}</a>
-                </h3>
-                <p class="card-excerpt">${a.excerpt}</p>
-                <div class="card-meta">
-                    <span class="author-name">${a.author}</span>
-                    <span class="separator">·</span>
-                    <span class="article-date">${a.date}</span>
+            <div class="article-card-body">
+                <h3 class="article-card-short-title">${a.shortTitle}</h3>
+                <div class="article-card-subtitle">${a.subtitle}</div>
+                <p class="article-card-excerpt">${a.excerpt}</p>
+                <div class="article-card-footer">
+                    <div class="article-card-meta">
+                        <span class="author-name">${a.author}</span>
+                        <span class="separator">·</span>
+                        <span class="meta-details">${a.date}</span>
+                    </div>
                 </div>
             </div>
         </article>
@@ -329,8 +351,10 @@ function renderPopular() {
     const popular = articles.filter(a => a.popular);
     popularContainer.innerHTML = popular.map(a => `
         <div class="popular-item">
-            <a href="${a.url}" class="popular-title">${a.title}</a>
-            <span class="popular-date">${a.date}</span>
+            <a href="${a.url}" class="popular-title" style="font-weight: 600;">
+                <span style="font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; display: block;">${a.shortTitle}</span>
+                <span style="font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--text-secondary);">${a.subtitle}</span>
+            </a>
         </div>
     `).join('');
 }
