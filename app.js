@@ -11,7 +11,8 @@ const articles = [
         author: "Página Virada",
         authorInitial: "P",
         date: "15 Jul 2026",
-        readTime: "8 min de leitura",
+        words: 300,
+        readTime: "2 min de leitura",
         image: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=800&h=500&fit=crop",
         thumb: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=400&h=300&fit=crop",
         popular: true
@@ -28,7 +29,8 @@ const articles = [
         author: "Página Virada",
         authorInitial: "P",
         date: "12 Jul 2026",
-        readTime: "6 min de leitura",
+        words: 465,
+        readTime: "3 min de leitura",
         image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&h=500&fit=crop",
         thumb: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=300&fit=crop",
         popular: true
@@ -45,7 +47,8 @@ const articles = [
         author: "Página Virada",
         authorInitial: "P",
         date: "10 Jul 2026",
-        readTime: "7 min de leitura",
+        words: 255,
+        readTime: "2 min de leitura",
         image: "https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=800&h=500&fit=crop",
         thumb: "https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=400&h=300&fit=crop",
         popular: true
@@ -62,7 +65,8 @@ const articles = [
         author: "Página Virada",
         authorInitial: "P",
         date: "8 Jul 2026",
-        readTime: "9 min de leitura",
+        words: 295,
+        readTime: "2 min de leitura",
         image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&h=500&fit=crop",
         thumb: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400&h=300&fit=crop"
     },
@@ -78,7 +82,8 @@ const articles = [
         author: "Página Virada",
         authorInitial: "P",
         date: "5 Jul 2026",
-        readTime: "12 min de leitura",
+        words: 225,
+        readTime: "2 min de leitura",
         image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&h=500&fit=crop",
         thumb: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=300&fit=crop"
     },
@@ -94,7 +99,8 @@ const articles = [
         author: "Página Virada",
         authorInitial: "P",
         date: "3 Jul 2026",
-        readTime: "7 min de leitura",
+        words: 125,
+        readTime: "1 min de leitura",
         image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800&h=500&fit=crop",
         thumb: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=400&h=300&fit=crop"
     },
@@ -110,7 +116,8 @@ const articles = [
         author: "Página Virada",
         authorInitial: "P",
         date: "1 Jul 2026",
-        readTime: "10 min de leitura",
+        words: 135,
+        readTime: "1 min de leitura",
         image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=500&fit=crop",
         thumb: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=300&fit=crop"
     }
@@ -141,7 +148,7 @@ function renderHero() {
     document.getElementById('hero-excerpt').textContent = heroArticle.excerpt;
     document.getElementById('hero-author').textContent = heroArticle.author;
     document.getElementById('hero-date').textContent = heroArticle.date;
-    document.getElementById('hero-readtime').textContent = heroArticle.readTime;
+    document.getElementById('hero-readtime').textContent = `${heroArticle.words} palavras · ${heroArticle.readTime}`;
     
     const heroBtn = document.getElementById('hero-btn');
     if (heroBtn) {
@@ -191,7 +198,7 @@ function renderArticles() {
                     <div class="article-card-meta">
                         <span class="author-name">${a.author}</span>
                         <span class="separator">·</span>
-                        <span class="meta-details">${a.date}</span>
+                        <span class="meta-details">${a.words} palavras (${a.readTime})</span>
                     </div>
                 </div>
             </div>
@@ -209,6 +216,7 @@ function renderPopular() {
             <a href="${a.url}" class="popular-title" style="font-weight: 600;">
                 <span style="font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; display: block;">${a.shortTitle}</span>
                 <span style="font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--text-secondary);">${a.subtitle}</span>
+                <span style="font-size: 11px; color: var(--text-muted); display: block; margin-top: 2px;">${a.words} palavras · ${a.readTime}</span>
             </a>
         </div>
     `).join('');
