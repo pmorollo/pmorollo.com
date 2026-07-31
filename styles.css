@@ -20,6 +20,7 @@
     --sidebar-width: 320px;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', -apple-system, system-ui, sans-serif;
+    --font-handwriting: 'Caveat', cursive;
 }
 
 [data-theme="dark"] {
@@ -276,6 +277,59 @@ body {
 .sidebar { position: sticky; top: 80px; }
 .sidebar-widget { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; }
 .widget-title { font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 16px; }
+
+/* ===== WIDGET HORA DO CAFÉ ===== */
+.widget-hora-cafe {
+    background: #fcf9f2;
+    border: 1px dashed var(--accent);
+    border-radius: var(--radius);
+    padding: 22px;
+    margin-bottom: 24px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(139, 37, 0, 0.05);
+}
+[data-theme="dark"] .widget-hora-cafe {
+    background: #1c1814;
+    border-color: var(--accent);
+}
+.hora-cafe-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.hora-cafe-badge {
+    font-size: 20px;
+}
+.hora-cafe-title {
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+}
+.hora-cafe-text {
+    font-family: 'Caveat', cursive;
+    font-size: 21px;
+    line-height: 1.45;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+.hora-cafe-text strong {
+    font-weight: 700;
+    color: var(--accent);
+}
+.hora-cafe-source {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    border-top: 1px dashed var(--border);
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .popular-item { display: flex; gap: 12px; text-decoration: none; color: var(--text-primary); padding: 10px 0; border-bottom: 1px solid var(--border); }
 .popular-item:last-child { border-bottom: none; padding-bottom: 0; }
