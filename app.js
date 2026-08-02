@@ -82,8 +82,8 @@ const articles = [
         author: "Página Virada",
         authorInitial: "P",
         date: "5 Jul 2026",
-        words: 225,
-        readTime: "2 min de leitura",
+        words: 1150,
+        readTime: "6 min de leitura",
         image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&h=500&fit=crop",
         thumb: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=300&fit=crop"
     },
