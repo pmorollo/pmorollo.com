@@ -6,8 +6,8 @@ const articles = [
         shortTitle: "Machado de Assis",
         subtitle: "A genialidade de Dom Casmurro, Memórias Póstumas e a relevância contemporânea",
         excerpt: "Uma análise profunda da obra de Machado de Assis e por que seu legado permanece mais relevante do que nunca no século XXI.",
-        category: "analise",
-        categoryName: "Análise Literária",
+        category: "literatura",
+        categoryName: "Literatura",
         author: "Página Virada",
         authorInitial: "P",
         date: "15 Jul 2026",
@@ -24,8 +24,8 @@ const articles = [
         shortTitle: "10 Livros",
         subtitle: "As obras essenciais que todo amante de literatura deveria ler",
         excerpt: "Uma lista curada dos livros essenciais que moldam a forma como enxergamos o mundo, a literatura e a nós mesmos.",
-        category: "comportamento",
-        categoryName: "Comportamento e Cultura",
+        category: "literatura",
+        categoryName: "Literatura",
         author: "Página Virada",
         authorInitial: "P",
         date: "12 Jul 2026",
@@ -42,8 +42,8 @@ const articles = [
         shortTitle: "Clarice Lispector",
         subtitle: "A escritora que transformou palavras em existência e a paixão no cotidiano",
         excerpt: "Uma homenagem à obra de Clarice Lispector e à sua capacidade única de penetrar nas camadas mais profundas da consciência humana.",
-        category: "analise",
-        categoryName: "Análise Literária",
+        category: "literatura",
+        categoryName: "Literatura",
         author: "Página Virada",
         authorInitial: "P",
         date: "10 Jul 2026",
@@ -61,7 +61,7 @@ const articles = [
         subtitle: "Como a leitura profunda pode transformar sua vida e sua atenção",
         excerpt: "Em tempos de distração digital, descubra por que a leitura profunda é mais importante do que nunca e como desenvolver esse hábito.",
         category: "comportamento",
-        categoryName: "Comportamento e Cultura",
+        categoryName: "Comportamento",
         author: "Página Virada",
         authorInitial: "P",
         date: "8 Jul 2026",
@@ -77,8 +77,8 @@ const articles = [
         shortTitle: "Itamar Vieira Jr.",
         subtitle: "Torto Arado, o processo criativo e a escrita como ato de justiça",
         excerpt: "O autor de Torto Arado fala sobre sua trajetória, o processo criativo e o papel da literatura na luta por justiça social.",
-        category: "fatos",
-        categoryName: "Fatos Atuais",
+        category: "literatura",
+        categoryName: "Literatura",
         author: "Página Virada",
         authorInitial: "P",
         date: "5 Jul 2026",
@@ -94,8 +94,8 @@ const articles = [
         shortTitle: "García Márquez",
         subtitle: "O realismo mágico em Cem Anos de Solidão que encantou o mundo",
         excerpt: "Uma análise de como o autor colombiano revolucionou a literatura mundial com sua mistura única de realismo e fantasia.",
-        category: "analise",
-        categoryName: "Análise Literária",
+        category: "literatura",
+        categoryName: "Literatura",
         author: "Página Virada",
         authorInitial: "P",
         date: "3 Jul 2026",
@@ -111,8 +111,8 @@ const articles = [
         shortTitle: "Guimarães Rosa",
         subtitle: "Sertão, linguagem e a metafísica em Grande Sertão: Veredas",
         excerpt: "Uma imersão no universo de Guimarães Rosa e a travessia filosófica de Riobaldo.",
-        category: "analise",
-        categoryName: "Análise Literária",
+        category: "literatura",
+        categoryName: "Literatura",
         author: "Página Virada",
         authorInitial: "P",
         date: "1 Jul 2026",
@@ -132,44 +132,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initApp() {
     renderHero();
-    renderArticles();
+    renderGrid();
     renderPopular();
-    setupEventListeners();
 }
 
 function renderHero() {
-    const heroArticle = articles[0];
-    const heroTag = document.querySelector('.hero-tag');
-    if (heroTag) heroTag.textContent = heroArticle.categoryName;
-    document.getElementById('hero-title').innerHTML = `
-        <span style="font-family: 'Playfair Display', serif; font-size: 42px; display: block; margin-bottom: 8px;">${heroArticle.shortTitle}</span>
-        <span style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); display: block; line-height: 1.4;">${heroArticle.subtitle}</span>
-    `;
-    document.getElementById('hero-excerpt').textContent = heroArticle.excerpt;
-    document.getElementById('hero-author').textContent = heroArticle.author;
-    document.getElementById('hero-date').textContent = heroArticle.date;
-    document.getElementById('hero-readtime').textContent = `${heroArticle.words} palavras · ${heroArticle.readTime}`;
-    
-    const heroBtn = document.getElementById('hero-btn');
-    if (heroBtn) {
-        heroBtn.onclick = () => window.location.href = heroArticle.url;
-    }
+    const hero = articles[0]; // Machado de Assis
+    if (!hero) return;
 
+    const heroTitle = document.getElementById('hero-title');
+    const heroExcerpt = document.getElementById('hero-excerpt');
+    const heroAuthor = document.getElementById('hero-author');
+    const heroDate = document.getElementById('hero-date');
+    const heroReadtime = document.getElementById('hero-readtime');
+    const heroBtn = document.getElementById('hero-btn');
     const heroImg = document.getElementById('hero-image');
-    if (heroImg) {
-        heroImg.style.backgroundImage = `url('${heroArticle.image}')`;
-    }
+
+    if (heroTitle) heroTitle.textContent = hero.shortTitle + ": " + hero.subtitle;
+    if (heroExcerpt) heroExcerpt.textContent = hero.excerpt;
+    if (heroAuthor) heroAuthor.textContent = hero.author;
+    if (heroDate) heroDate.textContent = hero.date;
+    if (heroReadtime) heroReadtime.textContent = hero.readTime;
+    if (heroBtn) heroBtn.onclick = () => window.location.href = hero.url;
+    if (heroImg) heroImg.style.backgroundImage = `url('${hero.image}')`;
 }
 
-function renderArticles() {
+function renderGrid() {
     const grid = document.getElementById('articles-grid');
     if (!grid) return;
-    
+
     let filtered = articles;
+
     if (currentCategory !== 'todos') {
         filtered = filtered.filter(a => a.category === currentCategory);
     }
-    if (currentSearch) {
+
+    if (currentSearch.trim() !== '') {
         const query = currentSearch.toLowerCase();
         filtered = filtered.filter(a => 
             a.shortTitle.toLowerCase().includes(query) ||
@@ -178,92 +176,106 @@ function renderArticles() {
         );
     }
 
+    grid.innerHTML = '';
+
     if (filtered.length === 0) {
-        grid.innerHTML = '<p class="no-results">Nenhum artigo encontrado para essa busca.</p>';
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">Nenhum artigo encontrado.</div>`;
         return;
     }
 
-    grid.innerHTML = filtered.map(a => `
-        <article class="article-card" onclick="window.location.href='${a.url}'">
-            <a href="${a.url}" class="card-image-link" onclick="event.stopPropagation()">
-                <div class="card-image article-card-image" style="background-image: url('${a.thumb}')">
-                    <span class="article-card-category">${a.categoryName}</span>
-                </div>
-            </a>
-            <div class="article-card-body">
-                <h3 class="article-card-short-title">${a.shortTitle}</h3>
-                <div class="article-card-subtitle">${a.subtitle}</div>
-                <p class="article-card-excerpt">${a.excerpt}</p>
-                <div class="article-card-footer">
-                    <div class="article-card-meta">
-                        <span class="author-name">${a.author}</span>
-                        <span class="separator">·</span>
-                        <span class="meta-details">${a.words} palavras (${a.readTime})</span>
-                    </div>
+    filtered.forEach(art => {
+        const card = document.createElement('article');
+        card.className = 'article-card';
+        card.onclick = () => window.location.href = art.url;
+
+        card.innerHTML = `
+            <div class="card-image-wrap">
+                <img src="${art.thumb}" alt="${art.shortTitle}" loading="lazy">
+                <span class="card-badge">${art.categoryName}</span>
+            </div>
+            <div class="card-content">
+                <h3 class="article-card-short-title">${art.shortTitle}</h3>
+                <p class="article-card-subtitle">${art.subtitle}</p>
+                <div class="card-meta">
+                    <span>${art.date}</span>
+                    <span>•</span>
+                    <span>${art.readTime}</span>
                 </div>
             </div>
-        </article>
-    `).join('');
+        `;
+        grid.appendChild(card);
+    });
 }
 
 function renderPopular() {
     const popularContainer = document.getElementById('popular-articles');
     if (!popularContainer) return;
 
-    const popular = articles.filter(a => a.popular);
-    popularContainer.innerHTML = popular.map(a => `
-        <div class="popular-item">
-            <a href="${a.url}" class="popular-title" style="font-weight: 600;">
-                <span style="font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; display: block;">${a.shortTitle}</span>
-                <span style="font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--text-secondary);">${a.subtitle}</span>
-                <span style="font-size: 11px; color: var(--text-muted); display: block; margin-top: 2px;">${a.words} palavras · ${a.readTime}</span>
-            </a>
-        </div>
-    `).join('');
+    const popularList = articles.filter(a => a.popular);
+    popularContainer.innerHTML = '';
+
+    popularList.forEach((art, idx) => {
+        const item = document.createElement('div');
+        item.className = 'popular-item';
+        item.onclick = () => window.location.href = art.url;
+
+        item.innerHTML = `
+            <span class="popular-number">0${idx + 1}</span>
+            <div class="popular-info">
+                <h4>${art.shortTitle}</h4>
+                <p>${art.readTime}</p>
+            </div>
+        `;
+        popularContainer.appendChild(item);
+    });
 }
 
 function filterCategory(cat) {
     currentCategory = cat;
-    document.querySelectorAll('.category-chip, .nav-link').forEach(el => {
-        if (el.dataset.category === cat || el.dataset.cat === cat) {
-            el.classList.add('active');
+
+    // Update Nav links
+    document.querySelectorAll('.main-nav .nav-link').forEach(link => {
+        if (link.getAttribute('data-category') === cat) {
+            link.classList.add('active');
         } else {
-            el.classList.remove('active');
+            link.classList.remove('active');
         }
     });
-    renderArticles();
+
+    // Update Category Chips
+    document.querySelectorAll('.category-chip').forEach(chip => {
+        if (chip.getAttribute('data-cat') === cat) {
+            chip.classList.add('active');
+        } else {
+            chip.classList.remove('active');
+        }
+    });
+
+    renderGrid();
 }
 
-function handleSearch(query) {
-    currentSearch = query;
-    renderArticles();
-}
-
-function toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
+function handleSearch(val) {
+    currentSearch = val;
+    renderGrid();
 }
 
 function toggleSearch() {
-    const searchBar = document.getElementById('searchBar');
-    if (searchBar) {
-        searchBar.classList.toggle('active');
-        if (searchBar.classList.contains('active')) {
+    const bar = document.getElementById('searchBar');
+    if (bar) {
+        bar.classList.toggle('active');
+        if (bar.classList.contains('active')) {
             document.getElementById('searchInput').focus();
         }
     }
 }
 
-function toggleMenu() {
-    const mainNav = document.getElementById('mainNav');
-    if (mainNav) {
-        mainNav.classList.toggle('active');
-    }
+function toggleTheme() {
+    document.body.classList.toggle('dark-theme');
+    const isDark = document.body.classList.contains('dark-theme');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
 
-function setupEventListeners() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
+function toggleMenu() {
+    const nav = document.getElementById('mainNav');
+    if (nav) nav.classList.toggle('active');
 }
