@@ -1,7 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /Rascunhos/
 
 User-agent: Mediapartners-Google
 Allow: /
+Disallow: /Rascunhos/
 
 Sitemap: https://pmorollo.com/sitemap.xml
