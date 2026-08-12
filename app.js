@@ -120,6 +120,23 @@ const articles = [
         readTime: "6 min de leitura",
         image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=500&fit=crop",
         thumb: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=300&fit=crop"
+    },
+    {
+        id: 7,
+        slug: "candido-direito-a-literatura",
+        url: "artigos/candido-direito-a-literatura.html",
+        shortTitle: "A Literatura é um Direito?",
+        subtitle: "Por que Antonio Candido ainda importa: a fabulação como necessidade humana na era da distração",
+        excerpt: "Por que ler ficção não é luxo nem passatempo, mas necessidade humana? Antonio Candido, em 'O Direito à Literatura', trata a fabulação como direito fundamental — e sua leitura nunca foi tão contemporânea.",
+        category: "literatura",
+        categoryName: "Literatura",
+        author: "Página Virada",
+        authorInitial: "P",
+        date: "12 Ago 2026",
+        words: 1050,
+        readTime: "5 min de leitura",
+        image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&h=500&fit=crop",
+        thumb: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=300&fit=crop"
     }
 ];
 
