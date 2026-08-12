@@ -28,11 +28,37 @@ Este site é estático (HTML/CSS/JS) e pode ser hospedado gratuitamente no GitHu
 
 ## Estado Atual (12 ago 2026)
 
-- **AdSense**: conta em análise (revisão em andamento)
-- **Search Console**: sitemap com 15 URLs descobertas; artigo mais recente (`candido-direito-a-literatura.html`) com indexação solicitada
-- **consulte.html**: página de referências atualizada com os 8 artigos, incluindo o bloco 8 — Antonio Candido ("O Direito à Literatura", in *Vários Escritos*, 1995)
-- **robots.txt**: bloqueia `/Rascunhos/`
-- **admin.html**: marcado `noindex, nofollow` (não deve ser indexado)
+**Fase 1 — Técnica (concluída)**
+- 8 artigos no ar; sitemap com 15 URLs (sem duplicata `/index.html`) e canonical tags em todas as páginas.
+- Linkagem interna "Leia também" entre artigos; `consulte.html` com referências dos 8 artigos, incluindo o bloco 8 — Antonio Candido ("O Direito à Literatura", in *Vários Escritos*, 1995).
+- `robots.txt` bloqueia `/Rascunhos/`; `admin.html` com `noindex, nofollow`.
+
+**Fase 1b — Linha Editorial v3.0 (concluída)**
+- Reescritos com análise formal como núcleo (leitura simbólica/psicológica apenas como hipótese opcional, quando sustentada no texto): home e `sobre.html`, `machado-de-assis`, `clarice-lispector`, `a-arte-de-ler`, `10-livros-essenciais` e `guimaraes-rosa`.
+- Títulos de artigos relacionados padronizados; sidebar "Hora do Café" passa a citar Antonio Candido.
+
+**Fase 2 — SEO e monetização (aguardando)**
+- AdSense: conta em análise (revisão em andamento).
+- Search Console: sitemap "Processado" com 15 URLs descobertas; indexação solicitada para `candido-direito-a-literatura.html`.
+
+## Cronograma de publicações (18 ago – 11 set 2026)
+
+Ritmo editorial: **2 artigos por semana** — terça-feira (atração) e sexta-feira (identidade), conforme a Linha Editorial v1.0 (ver `Downloads/Linha_Editorial_Pagina_Virada.txt`).
+
+| Data | Dia · tipo | Tema (eixo) |
+|---|---|---|
+| 18/08 | Ter · atração | Por que *O Cortiço* ainda importa: o ambiente, o dinheiro e as vontades (draft Aluísio Azevedo — Brasil/desigualdade) |
+| 21/08 | Sex · identidade | Estranhamento: quando a literatura nos faz ver de novo (Shklovsky — formação do leitor) |
+| 25/08 | Ter · atração | A leitura profunda pode recuperar nossa atenção? (atualidade) |
+| 28/08 | Sex · identidade | Baleia e o silêncio: a focalização em *Vidas Secas* (análise de obra) |
+| 01/09 | Ter · atração | A obra por trás da tela: o que muda quando um livro vira filme (adaptação) |
+| 04/09 | Sex · identidade | Aristóteles e a engenharia da persuasão (*Retórica*, draft — linguagem e poder) |
+| 08/09 | Ter · atração | Machado de Assis entenderia as máscaras das redes sociais? (reaproveita o eixo "máscaras sociais") |
+| 11/09 | Sex · identidade | Milan Kundera e o peso da liberdade (*A Insustentável Leveza do Ser*, draft — literatura e vida) |
+
+Status dos rascunhos em `Rascunhos/`: `antonio-candido.md` já publicado (`candido-direito-a-literatura.html`); *Vidas Secas* e *O Cortiço* têm menções no artigo "10 Livros" — os artigos dedicados usam enquadramentos novos para evitar duplicação.
+
+Entre publicações: conteúdo de circulação nas redes (pergunta + trecho da análise), conforme A.1 do documento editorial.
 
 ## Como publicar um novo artigo
 
