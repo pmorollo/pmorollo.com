@@ -40,7 +40,7 @@ const articles = [
         slug: "clarice-lispector",
         url: "artigos/clarice-lispector.html",
         shortTitle: "Clarice Lispector",
-        subtitle: "A escritora que transformou palavras em existência e a paixão no cotidiano",
+        subtitle: "A escritora que transformou palavras em existência, a epifania e a busca pelo mistério do ser",
         excerpt: "Uma homenagem à obra de Clarice Lispector e à sua capacidade única de penetrar nas camadas mais profundas da consciência humana.",
         category: "literatura",
         categoryName: "Literatura",
