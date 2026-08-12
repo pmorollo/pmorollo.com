@@ -30,6 +30,7 @@ Este site é estático (HTML/CSS/JS) e pode ser hospedado gratuitamente no GitHu
 
 - **AdSense**: conta em análise (revisão em andamento)
 - **Search Console**: sitemap com 15 URLs descobertas; artigo mais recente (`candido-direito-a-literatura.html`) com indexação solicitada
+- **consulte.html**: página de referências atualizada com os 8 artigos, incluindo o bloco 8 — Antonio Candido ("O Direito à Literatura", in *Vários Escritos*, 1995)
 - **robots.txt**: bloqueia `/Rascunhos/`
 - **admin.html**: marcado `noindex, nofollow` (não deve ser indexado)
 
