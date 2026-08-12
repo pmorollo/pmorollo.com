@@ -4,7 +4,7 @@ const articles = [
         slug: "machado-de-assis",
         url: "artigos/machado-de-assis.html",
         shortTitle: "Machado de Assis",
-        subtitle: "A genialidade de Dom Casmurro, Memórias Póstumas e a relevância contemporânea",
+        subtitle: "Ironia, narrador não-confiável e a anatomia das máscaras sociais",
         excerpt: "Uma análise profunda da obra de Machado de Assis e por que seu legado permanece mais relevante do que nunca no século XXI.",
         category: "literatura",
         categoryName: "Literatura",
