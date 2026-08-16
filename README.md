@@ -41,8 +41,21 @@ Este site é estático (HTML/CSS/JS) e pode ser hospedado gratuitamente no GitHu
 - Títulos de artigos relacionados padronizados; sidebar "Hora do Café" passa a citar Antonio Candido.
 
 **Fase 2 — SEO e monetização (em preparação)**
-- AdSense: conta em análise (revisão em andamento).
+- AdSense: site não aprovado por conteúdo de baixo valor e violação de políticas; não solicitar nova revisão até concluir o plano abaixo.
 - Search Console: sitemap "Processado" com 15 URLs descobertas; indexação solicitada para `candido-direito-a-literatura.html`.
+
+### Plano obrigatório antes de uma nova revisão do AdSense
+
+- [x] Retirar o código de anúncios das páginas institucionais, legais, de contato e publicidade.
+- [x] Identificar Pedro Morollo como autor e responsável editorial nos artigos e na página Sobre.
+- [x] Corrigir alegações promocionais não comprovadas e marcar `anuncie.html` como `noindex`.
+- [x] Atualizar a Política de Privacidade com a divulgação exigida sobre cookies e uso de dados pelo Google.
+- [x] Rever trechos superficiais, citações imprecisas e interpretações apresentadas como lições prontas.
+- [ ] Ampliar o acervo de 8 para uma meta editorial interna de 15–20 artigos autorais e substanciais. Essa faixa não é exigência numérica oficial do Google; é um critério interno para demonstrar consistência e profundidade.
+- [ ] Manter algumas semanas de publicação regular, seguindo o cronograma editorial.
+- [ ] Confirmar no Search Console que os novos artigos relevantes foram rastreados e indexados.
+- [ ] Fazer auditoria final de navegação, mobile, links, autoria, fontes e páginas com código de anúncios.
+- [ ] Somente após todos os itens anteriores, solicitar nova revisão no AdSense.
 
 ## Pendência programável de segurança
 
