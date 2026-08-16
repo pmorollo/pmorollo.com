@@ -44,6 +44,14 @@ Este site é estático (HTML/CSS/JS) e pode ser hospedado gratuitamente no GitHu
 - AdSense: conta em análise (revisão em andamento).
 - Search Console: sitemap "Processado" com 15 URLs descobertas; indexação solicitada para `candido-direito-a-literatura.html`.
 
+## Pendência programável de segurança
+
+- [ ] **Revogar o token antigo do GitHub que apareceu no pacote de 16/08/2026.**
+  - Responsável: Pedro Morollo.
+  - Data: a programar.
+  - Prioridade: alta; realizar antes de reutilizar ou revisar credenciais de acesso ao repositório.
+  - Observação: o token já foi removido dos arquivos e do remoto Git do projeto, mas somente a revogação na conta do GitHub o invalida definitivamente.
+
 ## Cronograma de publicações (18 ago – 11 set 2026)
 
 Ritmo editorial: **2 artigos por semana** — terça-feira (atração) e sexta-feira (identidade), conforme a Linha Editorial v1.0 (ver `Downloads/Linha_Editorial_Pagina_Virada.txt`).
