@@ -28,16 +28,19 @@ Este site é estático (HTML/CSS/JS) e pode ser hospedado gratuitamente no GitHu
 
 ## Estado Atual (12 ago 2026)
 
-**Fase 1 — Técnica (concluída)**
+**Fase 1 — Técnica (revisada em 16 ago 2026)**
 - 8 artigos no ar; sitemap com 15 URLs (sem duplicata `/index.html`) e canonical tags em todas as páginas.
 - Linkagem interna "Leia também" entre artigos; `consulte.html` com referências dos 8 artigos, incluindo o bloco 8 — Antonio Candido ("O Direito à Literatura", in *Vários Escritos*, 1995).
-- `robots.txt` bloqueia `/Rascunhos/`; `admin.html` com `noindex, nofollow`.
+- `robots.txt` bloqueia `/Rascunhos/` como proteção adicional; a pasta não faz parte do pacote publicável.
+- Consentimento unificado com opções de aceitar e recusar tecnologias opcionais.
+- Rascunhos e materiais de trabalho mantidos fora da pasta publicável.
+- O antigo painel local de newsletter foi retirado por não representar inscrições reais de visitantes.
 
 **Fase 1b — Linha Editorial v3.0 (concluída)**
 - Reescritos com análise formal como núcleo (leitura simbólica/psicológica apenas como hipótese opcional, quando sustentada no texto): home e `sobre.html`, `machado-de-assis`, `clarice-lispector`, `a-arte-de-ler`, `10-livros-essenciais` e `guimaraes-rosa`.
 - Títulos de artigos relacionados padronizados; sidebar "Hora do Café" passa a citar Antonio Candido.
 
-**Fase 2 — SEO e monetização (aguardando)**
+**Fase 2 — SEO e monetização (em preparação)**
 - AdSense: conta em análise (revisão em andamento).
 - Search Console: sitemap "Processado" com 15 URLs descobertas; indexação solicitada para `candido-direito-a-literatura.html`.
 
