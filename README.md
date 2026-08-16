@@ -100,5 +100,6 @@ Entre publicações: conteúdo de circulação nas redes (pergunta + trecho da a
 
 ## Linha Editorial
 
+- **Política Editorial v2.0**: `POLITICA-EDITORIAL.md` (público leitor comum, transparência de autoria, ciclo inicial de 90 dias, critérios de qualidade e revisão especializada futura).
 - **Método Página Virada v3.0**: skill do opencode em `.opencode/skills/pagina-virada/SKILL.md` (três etapas centrais + leitura simbólica opcional).
 - **Linha Editorial v1.0**: texto extraído em `Downloads/Linha_Editorial_Pagina_Virada.txt` (ritmo de 2 artigos/semana, eixos de conteúdo, checklist de aprovação).
