@@ -200,6 +200,39 @@ body {
 .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(139, 37, 0, 0.3); }
 .btn-sm { padding: 10px 20px; font-size: 13px; }
 
+/* ===== PERCURSO DE ESTUDO ===== */
+.study-cta {
+    margin: 38px 0;
+    padding: 26px;
+    border: 1px solid var(--border);
+    border-left: 5px solid #d8a516;
+    border-radius: var(--radius);
+    background: var(--bg-secondary);
+    box-shadow: var(--shadow-sm);
+}
+.study-cta-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #72530d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+.study-cta h2 { margin: 0 0 9px; font-family: var(--font-heading); font-size: 25px; }
+.study-cta p { margin: 0 0 18px; color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+.study-cta a {
+    display: inline-flex;
+    padding: 11px 20px;
+    border-radius: 100px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.study-cta a:hover { background: var(--accent-hover); }
+
 /* ===== SECTIONS ===== */
 .section { padding: 48px 0; }
 .section-title {
