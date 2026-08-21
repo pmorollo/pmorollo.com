@@ -19,7 +19,7 @@
 - nenhum ID duplicado;
 - nenhum link ou imagem local ausente;
 - sitemap XML válido, com 27 URLs, incluindo 13 da área educacional;
-- 13 páginas educacionais mantidas em `noindex, nofollow` durante os testes;
+- 13 páginas educacionais liberadas para indexação após a homologação;
 - nenhum endereço antigo do GitHub Pages ou menção residual ao Hub Literário nas páginas migradas;
 - links recíprocos entre o ensaio sobre Machado de Assis e o percurso de Dom Casmurro;
 - nenhuma credencial ou token encontrado nos arquivos rastreados;
@@ -41,13 +41,9 @@
 
 ## Bloqueios antes da publicação
 
-1. retirar `noindex, nofollow` das 13 páginas no mesmo conjunto de alterações que publicar o sitemap com essas URLs;
-2. executar teste final em navegador real, especialmente Safari e Chrome em celular;
-3. confirmar a estratégia de redirecionamento do Hub antigo para as novas URLs;
-4. revisar o diff completo antes do commit;
-5. criar commit somente após autorização explícita;
-6. fazer push somente após autorização explícita;
-7. publicar somente após validação da versão enviada ao GitHub.
+1. executar teste final em navegador real, especialmente Safari e Chrome em celular;
+2. confirmar a estratégia de redirecionamento do Hub antigo para as novas URLs;
+3. publicar somente após validação da versão enviada ao GitHub.
 
 ## Escopo mantido fora desta versão
 
