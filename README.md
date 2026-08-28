@@ -26,7 +26,14 @@ Este site é estático (HTML/CSS/JS) e pode ser hospedado gratuitamente no GitHu
 - Unsplash (imagens)
 - Google Fonts (Playfair Display, Inter, Lora)
 
-## Estado Atual (12 ago 2026)
+## Estado Atual (28 ago 2026)
+
+**Integração do Hub Literário — concluída em 28 ago 2026**
+- Área educacional publicada em `https://pmorollo.com/estudar/`.
+- *Dom Casmurro* preservado como obra-modelo em 13 URLs indexáveis.
+- O repositório antigo permanece ativo apenas para redirecionar as URLs históricas.
+- Fechamento técnico registrado em `HOMOLOGACAO-INTEGRACAO-HUB.md`.
+- Newsletter Página Virada Leitores mantida em espera; a pendência do Turnstile não bloqueia o site nem a área educacional.
 
 **Fase 1 — Técnica (revisada em 16 ago 2026)**
 - 8 artigos no ar; sitemap com 15 URLs (sem duplicata `/index.html`) e canonical tags em todas as páginas.
