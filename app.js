@@ -154,8 +154,8 @@ const articles = [
         featured: true,
         words: 1100,
         readTime: "6 min de leitura",
-        image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=500&fit=crop",
-        thumb: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=300&fit=crop"
+        image: "assets/images/macabea-cidade.webp",
+        thumb: "assets/images/macabea-cidade-thumb.webp"
     }
 ];
 
