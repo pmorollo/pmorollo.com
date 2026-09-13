@@ -196,7 +196,6 @@ function renderHero() {
     const heroAuthor = document.getElementById('hero-author');
     const heroDate = document.getElementById('hero-date');
     const heroReadtime = document.getElementById('hero-readtime');
-    const heroBtn = document.getElementById('hero-btn');
     const heroImg = document.getElementById('hero-image');
 
     if (heroTitle) {
@@ -211,11 +210,11 @@ function renderHero() {
     if (heroAuthor) heroAuthor.textContent = hero.author;
     if (heroDate) heroDate.textContent = hero.date;
     if (heroReadtime) heroReadtime.textContent = hero.readTime;
-    if (heroBtn) heroBtn.href = hero.url;
-    if (heroImg) heroImg.style.backgroundImage = `url('${hero.image}')`;
-
-    const alertLink = document.getElementById('newArticleLink');
-    if (alertLink) alertLink.href = hero.url;
+    if (heroImg) {
+        heroImg.href = hero.url;
+        heroImg.setAttribute('aria-label', `Ler o ensaio ${hero.shortTitle}`);
+        heroImg.style.backgroundImage = `url('${hero.image}')`;
+    }
 }
 
 function renderGrid() {
