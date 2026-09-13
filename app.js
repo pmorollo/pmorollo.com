@@ -141,7 +141,7 @@ const articles = [
     {
         id: 8,
         slug: "por-que-macabea-continua-invisivel",
-        url: "artigos/por-que-macabea-continua-invisivel.html",
+        url: "artigos/por-que-macabea-continua-invisivel.html?v=20260913-2",
         shortTitle: "Por que Macabéa continua invisível?",
         subtitle: "A linguagem do silêncio e o problema de narrar o outro em A Hora da Estrela",
         excerpt: "Como Clarice Lispector transforma silêncio, pobreza e mediação narrativa em uma pergunta sobre quem tem o direito de contar a vida do outro.",
