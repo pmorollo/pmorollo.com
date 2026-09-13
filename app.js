@@ -150,6 +150,8 @@ const articles = [
         author: "Página Virada",
         authorInitial: "PV",
         date: "13 Set 2026",
+        publishedAt: "2026-09-13",
+        featured: true,
         words: 1100,
         readTime: "6 min de leitura",
         image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=500&fit=crop",
@@ -168,10 +170,25 @@ function initApp() {
     renderHero();
     renderGrid();
     renderPopular();
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+}
+
+function getFeaturedArticle() {
+    return articles.find(article => article.featured) || articles[articles.length - 1];
+}
+
+function isNewArticle(article) {
+    if (!article.publishedAt) return false;
+    const published = new Date(`${article.publishedAt}T00:00:00`);
+    const ageInDays = (Date.now() - published.getTime()) / 86400000;
+    return ageInDays >= 0 && ageInDays < 15;
 }
 
 function renderHero() {
-    const hero = articles[0]; // Machado de Assis
+    const hero = getFeaturedArticle();
     if (!hero) return;
 
     const heroTitle = document.getElementById('hero-title');
@@ -182,20 +199,33 @@ function renderHero() {
     const heroBtn = document.getElementById('hero-btn');
     const heroImg = document.getElementById('hero-image');
 
-    if (heroTitle) heroTitle.textContent = hero.shortTitle + ": " + hero.subtitle;
+    if (heroTitle) {
+        heroTitle.innerHTML = '';
+        const titleLink = document.createElement('a');
+        titleLink.href = hero.url;
+        titleLink.textContent = `${hero.shortTitle}: ${hero.subtitle}`;
+        titleLink.style.cssText = 'color: inherit; text-decoration: none;';
+        heroTitle.appendChild(titleLink);
+    }
     if (heroExcerpt) heroExcerpt.textContent = hero.excerpt;
     if (heroAuthor) heroAuthor.textContent = hero.author;
     if (heroDate) heroDate.textContent = hero.date;
     if (heroReadtime) heroReadtime.textContent = hero.readTime;
-    if (heroBtn) heroBtn.onclick = () => window.location.href = hero.url;
+    if (heroBtn) heroBtn.href = hero.url;
     if (heroImg) heroImg.style.backgroundImage = `url('${hero.image}')`;
+
+    const alertLink = document.getElementById('newArticleLink');
+    if (alertLink) alertLink.href = hero.url;
 }
 
 function renderGrid() {
     const grid = document.getElementById('articles-grid');
     if (!grid) return;
 
-    let filtered = articles;
+    const featured = getFeaturedArticle();
+    let filtered = currentSearch.trim() === ''
+        ? articles.filter(article => article.id !== featured.id)
+        : articles;
 
     if (currentCategory !== 'todos') {
         filtered = filtered.filter(a => a.category === currentCategory);
@@ -225,7 +255,7 @@ function renderGrid() {
         card.innerHTML = `
             <div class="card-image-wrap">
                 <img src="${art.thumb}" alt="${art.shortTitle}" loading="lazy">
-                <span class="card-badge">${art.categoryName}</span>
+                <span class="card-badge">${isNewArticle(art) ? 'Novo · ' : ''}${art.categoryName}</span>
             </div>
             <div class="card-content">
                 <h3 class="article-card-short-title">${art.shortTitle}</h3>
@@ -296,8 +326,8 @@ function handleSearch(val) {
 function toggleSearch() {
     const bar = document.getElementById('searchBar');
     if (bar) {
-        bar.classList.toggle('active');
-        if (bar.classList.contains('active')) {
+        bar.classList.toggle('open');
+        if (bar.classList.contains('open')) {
             document.getElementById('searchInput').focus();
         }
     }
@@ -311,5 +341,15 @@ function toggleTheme() {
 
 function toggleMenu() {
     const nav = document.getElementById('mainNav');
-    if (nav) nav.classList.toggle('active');
+    const button = document.querySelector('.menu-toggle');
+    if (!nav) return;
+    const isOpen = nav.classList.toggle('open');
+    if (button) button.setAttribute('aria-expanded', String(isOpen));
+}
+
+function closeMenu() {
+    const nav = document.getElementById('mainNav');
+    const button = document.querySelector('.menu-toggle');
+    if (nav) nav.classList.remove('open');
+    if (button) button.setAttribute('aria-expanded', 'false');
 }

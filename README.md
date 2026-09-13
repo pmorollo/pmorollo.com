@@ -33,6 +33,8 @@ Este site é estático (HTML/CSS/JS) e pode ser hospedado gratuitamente no GitHu
 - Novo ensaio: “Por que Macabéa continua invisível? A linguagem do silêncio e o problema de narrar o outro em *A Hora da Estrela*”.
 - Autoria editorial do novo ensaio identificada como Página Virada.
 - Artigo integrado à home, à busca, ao sitemap, às referências e à linkagem interna do artigo sobre Clarice Lispector.
+- A home destaca a publicação editorial selecionada, sinaliza novidades por 15 dias e evita repetir o destaque na grade principal.
+- A seção “Hora do Café” mantém seu estilo atual e troca personagens e referências literárias a cada dois meses; próxima revisão prevista para novembro de 2026.
 
 **Integração do Hub Literário — concluída em 28 ago 2026**
 - Área educacional publicada em `https://pmorollo.com/estudar/`.
