@@ -137,6 +137,23 @@ const articles = [
         readTime: "5 min de leitura",
         image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&h=500&fit=crop",
         thumb: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=300&fit=crop"
+    },
+    {
+        id: 8,
+        slug: "por-que-macabea-continua-invisivel",
+        url: "artigos/por-que-macabea-continua-invisivel.html",
+        shortTitle: "Por que Macabéa continua invisível?",
+        subtitle: "A linguagem do silêncio e o problema de narrar o outro em A Hora da Estrela",
+        excerpt: "Como Clarice Lispector transforma silêncio, pobreza e mediação narrativa em uma pergunta sobre quem tem o direito de contar a vida do outro.",
+        category: "literatura",
+        categoryName: "Literatura",
+        author: "Página Virada",
+        authorInitial: "PV",
+        date: "13 Set 2026",
+        words: 1100,
+        readTime: "6 min de leitura",
+        image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=500&fit=crop",
+        thumb: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=300&fit=crop"
     }
 ];
 

@@ -8,7 +8,7 @@ Este site é estático (HTML/CSS/JS) e pode ser hospedado gratuitamente no GitHu
 
 ## Funcionalidades
 
-- 8 artigos completos sobre literatura
+- 9 artigos completos sobre literatura
 - Imagens reais do Unsplash
 - Dark/Light mode
 - Busca de artigos
@@ -26,7 +26,13 @@ Este site é estático (HTML/CSS/JS) e pode ser hospedado gratuitamente no GitHu
 - Unsplash (imagens)
 - Google Fonts (Playfair Display, Inter, Lora)
 
-## Estado Atual (28 ago 2026)
+## Estado Atual (13 set 2026)
+
+**Publicação editorial — preparada em 13 set 2026**
+- 9 artigos completos no acervo.
+- Novo ensaio: “Por que Macabéa continua invisível? A linguagem do silêncio e o problema de narrar o outro em *A Hora da Estrela*”.
+- Autoria editorial do novo ensaio identificada como Página Virada.
+- Artigo integrado à home, à busca, ao sitemap, às referências e à linkagem interna do artigo sobre Clarice Lispector.
 
 **Integração do Hub Literário — concluída em 28 ago 2026**
 - Área educacional publicada em `https://pmorollo.com/estudar/`.
@@ -58,7 +64,7 @@ Este site é estático (HTML/CSS/JS) e pode ser hospedado gratuitamente no GitHu
 - [x] Corrigir alegações promocionais não comprovadas e marcar `anuncie.html` como `noindex`.
 - [x] Atualizar a Política de Privacidade com a divulgação exigida sobre cookies e uso de dados pelo Google.
 - [x] Rever trechos superficiais, citações imprecisas e interpretações apresentadas como lições prontas.
-- [ ] Ampliar o acervo de 8 para uma meta editorial interna de 15–20 artigos autorais e substanciais. Essa faixa não é exigência numérica oficial do Google; é um critério interno para demonstrar consistência e profundidade.
+- [ ] Ampliar o acervo de 9 para uma meta editorial interna de 15–20 artigos autorais e substanciais. Essa faixa não é exigência numérica oficial do Google; é um critério interno para demonstrar consistência e profundidade.
 - [ ] Manter algumas semanas de publicação regular, seguindo o cronograma editorial.
 - [ ] Confirmar no Search Console que os novos artigos relevantes foram rastreados e indexados.
 - [ ] Fazer auditoria final de navegação, mobile, links, autoria, fontes e páginas com código de anúncios.
