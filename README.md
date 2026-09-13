@@ -28,7 +28,7 @@ Este site é estático (HTML/CSS/JS) e pode ser hospedado gratuitamente no GitHu
 
 ## Estado Atual (13 set 2026)
 
-**Publicação editorial — preparada em 13 set 2026**
+**Publicação editorial — publicada em 13 set 2026**
 - 9 artigos completos no acervo.
 - Novo ensaio: “Por que Macabéa continua invisível? A linguagem do silêncio e o problema de narrar o outro em *A Hora da Estrela*”.
 - Autoria editorial do novo ensaio identificada como Página Virada.
