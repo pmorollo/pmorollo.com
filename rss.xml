@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Página Virada</title>
+    <link>https://pmorollo.com/</link>
+    <description>Literatura e interpretação — ensaios e releituras que mostram como as obras produzem seus efeitos. Por Pedro Morollo.</description>
+    <language>pt-BR</language>
+    <atom:link href="https://pmorollo.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Por que Macabéa continua invisível? A linguagem do silêncio em A Hora da Estrela</title>
+      <link>https://pmorollo.com/artigos/por-que-macabea-continua-invisivel.html</link>
+      <guid>https://pmorollo.com/artigos/por-que-macabea-continua-invisivel.html</guid>
+      <pubDate>Sun, 13 Sep 2026 09:00:00 -0300</pubDate>
+      <description>Como Clarice Lispector transforma silêncio, pobreza e mediação narrativa em uma pergunta sobre quem tem o direito de contar a vida do outro.</description>
+    </item>
+    <item>
+      <title>A Literatura é um Direito? Por que Antonio Candido ainda importa</title>
+      <link>https://pmorollo.com/artigos/candido-direito-a-literatura.html</link>
+      <guid>https://pmorollo.com/artigos/candido-direito-a-literatura.html</guid>
+      <pubDate>Wed, 12 Aug 2026 09:00:00 -0300</pubDate>
+      <description>Por que ler ficção não é luxo nem passatempo, mas necessidade humana? Antonio Candido e a fabulação como direito fundamental.</description>
+    </item>
+    <item>
+      <title>Machado de Assis: ironia e narrador não confiável</title>
+      <link>https://pmorollo.com/artigos/machado-de-assis.html</link>
+      <guid>https://pmorollo.com/artigos/machado-de-assis.html</guid>
+      <pubDate>Wed, 15 Jul 2026 09:00:00 -0300</pubDate>
+      <description>A ironia cirúrgica, o narrador não-confiável e a anatomia das máscaras sociais na obra de Machado de Assis.</description>
+    </item>
+    <item>
+      <title>10 Livros essenciais</title>
+      <link>https://pmorollo.com/artigos/10-livros-essenciais.html</link>
+      <guid>https://pmorollo.com/artigos/10-livros-essenciais.html</guid>
+      <pubDate>Sun, 12 Jul 2026 09:00:00 -0300</pubDate>
+      <description>Uma seleção das obras essenciais da literatura mundial, cada escolha acompanhada de um breve eixo de análise.</description>
+    </item>
+    <item>
+      <title>Clarice Lispector: a epifania e o mistério do ser</title>
+      <link>https://pmorollo.com/artigos/clarice-lispector.html</link>
+      <guid>https://pmorollo.com/artigos/clarice-lispector.html</guid>
+      <pubDate>Fri, 10 Jul 2026 09:00:00 -0300</pubDate>
+      <description>O fluxo de consciência, o estranhamento e a epifania existencial na obra de Clarice Lispector.</description>
+    </item>
+    <item>
+      <title>A Arte de Ler: leitura profunda e atenção</title>
+      <link>https://pmorollo.com/artigos/a-arte-de-ler.html</link>
+      <guid>https://pmorollo.com/artigos/a-arte-de-ler.html</guid>
+      <pubDate>Wed, 08 Jul 2026 09:00:00 -0300</pubDate>
+      <description>Como a leitura profunda pode transformar a atenção e a percepção, e por que ela importa em tempos de distração digital.</description>
+    </item>
+    <item>
+      <title>Itamar Vieira Jr.: Torto Arado, silêncio e memória</title>
+      <link>https://pmorollo.com/artigos/itamar-vieira-junior.html</link>
+      <guid>https://pmorollo.com/artigos/itamar-vieira-junior.html</guid>
+      <pubDate>Sun, 05 Jul 2026 09:00:00 -0300</pubDate>
+      <description>A obra de Itamar Vieira Jr. e o processo criativo como ato de reparação e memória.</description>
+    </item>
+    <item>
+      <title>García Márquez: o realismo mágico em Cem Anos de Solidão</title>
+      <link>https://pmorollo.com/artigos/garcia-marquez.html</link>
+      <guid>https://pmorollo.com/artigos/garcia-marquez.html</guid>
+      <pubDate>Fri, 03 Jul 2026 09:00:00 -0300</pubDate>
+      <description>Como o autor colombiano revolucionou a literatura mundial com sua mistura de realismo e fantasia.</description>
+    </item>
+    <item>
+      <title>Guimarães Rosa: sertão, linguagem e metafísica em Grande Sertão: Veredas</title>
+      <link>https://pmorollo.com/artigos/guimaraes-rosa.html</link>
+      <guid>https://pmorollo.com/artigos/guimaraes-rosa.html</guid>
+      <pubDate>Wed, 01 Jul 2026 09:00:00 -0300</pubDate>
+      <description>Uma imersão no universo de Guimarães Rosa e a travessia filosófica de Riobaldo.</description>
+    </item>
+  </channel>
+</rss>

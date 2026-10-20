@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter — Kit de Leitura | Página Virada</title>
+    <meta name="description" content="Receba o Kit de Leitura (PDF) e um e-mail por semana com os novos ensaios do Página Virada. Conteúdo editorial, sem spam.">
+    <meta name="og:title" content="Newsletter — Kit de Leitura | Página Virada">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pmorollo.com/newsletter/">
+    <link rel="canonical" href="https://pmorollo.com/newsletter/">
+    <link rel="alternate" type="application/rss+xml" title="Página Virada — RSS" href="https://pmorollo.com/rss.xml">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon" aria-hidden="true">PV</span>
+                <span class="logo-text">Página Virada</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html" class="nav-link">Início</a>
+                <a href="../artigos/literatura/" class="nav-link">Literatura</a>
+                <a href="../artigos/comportamento/" class="nav-link">Comportamento</a>
+                <a href="../estudar/index.html" class="nav-link">Estudar Literatura</a>
+                <a href="../consulte.html" class="nav-link">Consulte</a>
+                <a href="../sobre.html" class="nav-link">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container" style="max-width:760px">
+                <p style="font-size:14px;color:var(--text-muted);margin-bottom:8px"><a href="../index.html" style="color:inherit">Início</a> › Newsletter</p>
+                <h1 style="font-family:var(--font-heading);font-size:38px;margin-bottom:8px">Kit de Leitura</h1>
+                <p style="color:var(--text-secondary);font-size:18px;line-height:1.6;margin-bottom:24px">Um guia em PDF para interpretar qualquer romance — e <strong>um e-mail por semana</strong> com os novos ensaios e percursos de estudo. Sem spam; cancele quando quiser.</p>
+
+                <aside class="newsletter-cta" style="padding:28px;border:1px solid var(--border);border-radius:16px;background:var(--bg-secondary)">
+                    <form onsubmit="return handleNewsletter(this)" style="display:flex;gap:8px;flex-wrap:wrap">
+                        <input type="email" name="email" required placeholder="voce@email.com" aria-label="Seu e-mail" style="flex:1;min-width:220px;padding:14px 16px;border:1px solid var(--border);border-radius:10px;background:var(--bg-primary);color:var(--text-primary)">
+                        <button type="submit" style="padding:14px 22px;border:none;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer">Quero o Kit</button>
+                    </form>
+                    <p class="newsletter-note" hidden style="color:var(--accent);margin-top:10px;font-weight:600"></p>
+                    <p style="font-size:12px;color:var(--text-muted);margin-top:10px">Ao assinar, você concorda com a <a href="../politica-privacidade.html" style="color:var(--accent)">Política de Privacidade</a>.</p>
+                </aside>
+
+                <h2 style="font-family:var(--font-heading);margin-top:36px">O que você recebe</h2>
+                <ul style="color:var(--text-secondary);line-height:1.9">
+                    <li><strong>Kit de Leitura (PDF):</strong> um roteiro em 7 passos para preparar, ler e interpretar uma obra sem perder o prazer da leitura.</li>
+                    <li><strong>E-mail semanal:</strong> avisos dos novos ensaios, percursos de estudo (ENEM/vestibular) e dicas de interpretação.</li>
+                    <li><strong>Sem ruído:</strong> nenhuma promessa, nenhum atalho — só método de leitura.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Página Virada — por Pedro Morollo. <a href="../consulte.html">Consulte as Referências</a> | <a href="../politica-privacidade.html">Política de Privacidade</a> | <a href="../termos-de-uso.html">Termos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../newsletter.js"></script>
+</body>
+</html>
