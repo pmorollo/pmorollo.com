@@ -3,7 +3,8 @@
    serviço próprio de captura quando ele estiver no ar.
    Ex.: window.NEWSLETTER_ENDPOINT = "https://newsletter.pmorollo.com/api/subscribe"; */
 (function () {
-  window.NEWSLETTER_ENDPOINT = window.NEWSLETTER_ENDPOINT || "";
+  window.NEWSLETTER_ENDPOINT = window.NEWSLETTER_ENDPOINT ||
+    "https://newsletter-api-production-187e.up.railway.app/api/subscribe";
 
   window.handleNewsletter = function (form) {
     var note = form.parentNode.querySelector(".newsletter-note");
