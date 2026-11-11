@@ -109,58 +109,13 @@
 
     <main>
         <div id="home-view">
-            <!-- HERO -->
-            <section class="hero" id="hero">
-                <div class="container">
-                    <div class="hero-content">
-                        <span class="hero-tag">Novo ensaio em destaque</span>
-                        <h1 id="hero-title"><a href="artigos/por-que-macabea-continua-invisivel.html?v=20260913-2" style="color: inherit; text-decoration: none;">Por que Macabéa continua invisível? A linguagem do silêncio e o problema de narrar o outro em A Hora da Estrela</a></h1>
-                        <p id="hero-excerpt">Como Clarice Lispector transforma silêncio, pobreza e mediação narrativa em uma pergunta sobre quem tem o direito de contar a vida do outro.</p>
-                        <div class="hero-meta">
-                            <span id="hero-author" style="font-weight: 600;">Pedro Morollo</span>
-                            <span class="separator">·</span>
-                            <span id="hero-date">13 Set 2026</span>
-                            <span class="separator">·</span>
-                            <span id="hero-readtime">6 min de leitura</span>
-                        </div>
-                    </div>
-                    <a class="hero-image" id="hero-image" href="artigos/por-que-macabea-continua-invisivel.html?v=20260913-2" aria-label="Ler o ensaio Por que Macabéa continua invisível?" style="background-image: url('assets/images/macabea-cidade.webp');"></a>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="container">
-                    <aside class="newsletter-cta" style="max-width:800px;margin:0 auto;padding:28px;border:1px solid var(--border);border-radius:16px;background:var(--bg-secondary)">
-                        <h3 style="font-family:var(--font-heading);margin-bottom:8px">Receba o Kit de Leitura</h3>
-                        <p style="color:var(--text-secondary);margin-bottom:16px">Um guia em PDF para interpretar qualquer romance — e um e-mail por semana com os novos ensaios. Sem spam.</p>
-                        <form onsubmit="return handleNewsletter(this)" style="display:flex;gap:8px;flex-wrap:wrap">
-                            <input type="email" name="email" required placeholder="voce@email.com" aria-label="Seu e-mail" style="flex:1;min-width:220px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-primary);color:var(--text-primary)">
-                            <button type="submit" style="padding:12px 20px;border:none;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer">Quero o Kit</button>
-                        </form>
-                        <p class="newsletter-note" hidden style="color:var(--accent);margin-top:10px;font-weight:600"></p>
-                        <p style="font-size:12px;color:var(--text-muted);margin-top:10px">Ao assinar, você concorda com a <a href="politica-privacidade.html" style="color:var(--accent)">Política de Privacidade</a>.</p>
-                    </aside>
-                </div>
-            </section>
-
-            <!-- CATEGORIES -->
-            <section class="section categories-section">
-                <div class="container">
-                    <div class="categories-scroll">
-                        <button class="category-chip active" onclick="filterCategory('todos')" data-cat="todos">Todos</button>
-                        <button class="category-chip" onclick="filterCategory('literatura')" data-cat="literatura">Literatura</button>
-                        <button class="category-chip" onclick="filterCategory('comportamento')" data-cat="comportamento">Comportamento</button>
-                    </div>
-                </div>
-            </section>
-
                         <!-- PILAR ESTUDAR LITERATURA (REBRAND ESTRUTURAL) -->
             <section class="section estudar-home-section" id="estudar-literatura">
                 <div class="container">
                     <div class="estudar-home-header">
                         <div>
-                            <span class="card-badge" style="margin-bottom:8px;display:inline-block;">Pilar de Formação do Leitor</span>
-                            <h2 class="estudar-home-title">Estudar Literatura — Percursos de Estudo & Análise Crítica</h2>
+                            <span class="card-badge" style="margin-bottom:10px;display:inline-block;">Pilar de Formação do Leitor · por Pedro Morollo</span>
+                            <h1 class="estudar-home-title" style="margin-bottom:12px;">Estudar Literatura — Percursos de Estudo & Análise Crítica</h1>
                             <p class="estudar-home-subtitle">Guias estruturados, contexto histórico e interpretação textual sem substituir o encontro direto com a obra.</p>
                         </div>
                         <a href="estudar/index.html" class="estudar-home-link-all">Ver índice completo de obras &rarr;</a>
@@ -203,6 +158,55 @@
                     </div>
                 </div>
             </section>
+
+
+            <!-- HERO -->
+            <section class="hero hero-destaque-secundario" id="hero" style="border-top: 1px solid var(--border); margin-top: 20px; padding-top: 40px;">
+                <div class="container">
+                    <div class="hero-content">
+                        <span class="hero-tag">Ensaio em Destaque</span>
+                        <h2 id="hero-title" style="font-size:clamp(1.4rem, 2.5vw, 1.85rem);line-height:1.25;"><a href="artigos/por-que-macabea-continua-invisivel.html?v=20260913-2" style="color: inherit; text-decoration: none;">Por que Macabéa continua invisível? A linguagem do silêncio e o problema de narrar o outro em A Hora da Estrela</a></h2>
+                        <p id="hero-excerpt">Como Clarice Lispector transforma silêncio, pobreza e mediação narrativa em uma pergunta sobre quem tem o direito de contar a vida do outro.</p>
+                        <div class="hero-meta">
+                            <span id="hero-author" style="font-weight: 600;">Pedro Morollo</span>
+                            <span class="separator">·</span>
+                            <span id="hero-date">13 Set 2026</span>
+                            <span class="separator">·</span>
+                            <span id="hero-readtime">6 min de leitura</span>
+                        </div>
+                    </div>
+                    <a class="hero-image" id="hero-image" href="artigos/por-que-macabea-continua-invisivel.html?v=20260913-2" aria-label="Ler o ensaio Por que Macabéa continua invisível?" style="background-image: url('assets/images/macabea-cidade.webp');"></a>
+                </div>
+            </section>
+
+
+            <section class="section">
+                <div class="container">
+                    <aside class="newsletter-cta" style="max-width:800px;margin:0 auto;padding:28px;border:1px solid var(--border);border-radius:16px;background:var(--bg-secondary)">
+                        <h3 style="font-family:var(--font-heading);margin-bottom:8px">Receba o Kit de Leitura</h3>
+                        <p style="color:var(--text-secondary);margin-bottom:16px">Um guia em PDF para interpretar qualquer romance — e um e-mail por semana com os novos ensaios. Sem spam.</p>
+                        <form onsubmit="return handleNewsletter(this)" style="display:flex;gap:8px;flex-wrap:wrap">
+                            <input type="email" name="email" required placeholder="voce@email.com" aria-label="Seu e-mail" style="flex:1;min-width:220px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-primary);color:var(--text-primary)">
+                            <button type="submit" style="padding:12px 20px;border:none;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer">Quero o Kit</button>
+                        </form>
+                        <p class="newsletter-note" hidden style="color:var(--accent);margin-top:10px;font-weight:600"></p>
+                        <p style="font-size:12px;color:var(--text-muted);margin-top:10px">Ao assinar, você concorda com a <a href="politica-privacidade.html" style="color:var(--accent)">Política de Privacidade</a>.</p>
+                    </aside>
+                </div>
+            </section>
+
+
+            <!-- CATEGORIES -->
+            <section class="section categories-section">
+                <div class="container">
+                    <div class="categories-scroll">
+                        <button class="category-chip active" onclick="filterCategory('todos')" data-cat="todos">Todos</button>
+                        <button class="category-chip" onclick="filterCategory('literatura')" data-cat="literatura">Literatura</button>
+                        <button class="category-chip" onclick="filterCategory('comportamento')" data-cat="comportamento">Comportamento</button>
+                    </div>
+                </div>
+            </section>
+
 
             <!-- ARTICLES GRID + SIDEBAR -->
             <section class="section">
