@@ -20,12 +20,12 @@
     --sidebar-width: 320px;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', -apple-system, system-ui, sans-serif;
-    --font-handwriting: 'Caveat', cursive;
+    --font-quote: 'Lora', Georgia, serif;
     /* ===== LINHAS EDITORIAIS (REBRAND) ===== */
-    --line-estudar: #1c3d5a;
-    --line-estudar-bg: #edf2f7;
-    --line-estudar-border: #cbd5e1;
-    --line-estudar-hover: #102a43;
+    --line-estudar: #8a5a1e;
+    --line-estudar-bg: #faf4ea;
+    --line-estudar-border: #e8d7c2;
+    --line-estudar-hover: #6d4413;
     --line-ensaio: #8b2500;
     --line-ensaio-bg: #fdf2ee;
     --line-comportamento: #22543d;
@@ -47,10 +47,10 @@
     --shadow: 0 4px 20px rgba(0,0,0,0.3);
     --shadow-hover: 0 12px 40px rgba(0,0,0,0.5);
     /* ===== LINHAS EDITORIAIS DARK ===== */
-    --line-estudar: #63b3ed;
-    --line-estudar-bg: #14213d;
-    --line-estudar-border: #2c4164;
-    --line-estudar-hover: #90cdf4;
+    --line-estudar: #e5a95d;
+    --line-estudar-bg: #241c12;
+    --line-estudar-border: #42321f;
+    --line-estudar-hover: #f3be78;
     --line-ensaio: #d4764e;
     --line-ensaio-bg: #2a1f1a;
     --line-comportamento: #68d391;
@@ -354,14 +354,14 @@ body {
     font-size: 20px;
 }
 .hora-cafe-title {
-    font-family: 'Caveat', cursive;
+    font-family: var(--font-quote); font-style: italic;
     font-size: 30px;
     font-weight: 700;
     color: var(--accent);
     line-height: 1;
 }
 .hora-cafe-text {
-    font-family: 'Caveat', cursive;
+    font-family: var(--font-quote); font-style: italic;
     font-size: 21px;
     line-height: 1.45;
     color: var(--text-primary);
