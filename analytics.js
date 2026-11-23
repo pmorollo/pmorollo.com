@@ -1,9 +1,6 @@
-/* Página Virada — GA4 próprio.
-   Só carrega quando window.GA4_ID estiver definido (criar a propriedade GA4 do pmorollo.com).
-   Ex.: window.GA4_ID = "G-XXXXXXXXXX";
-   Ao ativar, respeita o Consent Mode v2 já definido em consent.js (analytics_storage). */
+/* Página Virada — GA4 com Consent Mode v2. */
 (function () {
-  window.GA4_ID = window.GA4_ID || "";
+  window.GA4_ID = window.GA4_ID || "G-KNCVDKP2SG";
   window.dataLayer = window.dataLayer || [];
   if (typeof window.gtag !== "function") {
     window.gtag = function () { window.dataLayer.push(arguments); };
